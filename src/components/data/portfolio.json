@@ -1,0 +1,519 @@
+[
+  {
+  "extracted_data": {
+    "vehicle_listing": {
+      "title": "Mont Fort",
+      "description": "The Mont Fort makes a perfect home on wheels, this conversion van is your go-to option. Enjoy the rides in your winter, being warm and comfy with the well-insulated van.",
+      "subtitle": "Our Exclusive Flagship In Van",
+      "price": null,
+      "specifications": {
+        "make_model": "2024 Mercedes-Benz Sprinter",
+        "wheelbase": "170",
+        "drivetrain": "AWD",
+        "capacity": {
+          "sits": "4",
+          "sleeps": "4"
+        }
+      }
+    },
+    "gallery": [
+      "/images/tild3538-6665-4230-a330-393730386433__image.png",
+      "/images/tild3236-3633-4231-a166-303964636238__007.png",
+      "/images/tild3863-3438-4264-a362-613433376237__2025-03-15_2.png",
+      "/images/tild6630-6435-4263-b039-343131326236__2025-03-17_18.png",
+      "/images/tild6635-3564-4730-a137-383362366330__2025-04-15_6.png",
+      "/images/tild6462-3965-4662-b139-636434636236__2025-01-14_46.png",
+      "/images/tild6666-3836-4937-a238-616163313161__2025-03-17_1.png",
+      "/images/tild6339-6230-4232-a166-386263376631__2025-04-15_10.png",
+      "/images/tild6365-6563-4530-b532-613765313461__2025-04-15_14.png",
+      "/images/tild6638-3064-4231-a537-323831633163__004.png",
+      "/images/tild3538-3833-4934-b536-343661363836__003.png",
+      "/images/tild6633-3535-4737-a238-313637336636__006.png"
+    ],
+    "media": {
+      "video": {
+        "title": "Big Bear Vans: Building the Dream",
+        "platform": "YouTube",
+        "id": "zW8LUn4Uafs"
+      }
+    },
+    "detailed_features": [
+      {
+        "category": "Insulation and Paneling",
+        "items": [
+          "4-season Thinsulate insulation",
+          "Fibre-insulated doors & windows",
+          "Wood panel ceilings & walls",
+          "Composite decks",
+          "Marine-style heavy-duty flooring"
+        ]
+      },
+      {
+        "category": "Electrics",
+        "items": [
+          "12V 40 A DC-DC battery charger",
+          "600 amp hours of off-grid power",
+          "Glycol heating system 12V A/C unit",
+          "350W Solar panel",
+          "110V Shore power connector Fan",
+          "Motorized awning , USB and 110V outlets"
+        ]
+      },
+      {
+        "category": "Exterior & Interior",
+        "items": [
+          "Large Storage cabinets with multiple removable shelves",
+          "Unique flooring & wall Skylight roof with mosquito net and blackout screen",
+          "Bump-outs, Raptor coated with insulated",
+          "Electric AMP Slip research steps",
+          "Awning-style double-glazed windows",
+          "Roof fan with adjustable vents"
+        ]
+      },
+      {
+        "category": "Kitchen",
+        "items": [
+          "Pop-up countertop extension Outdoor fold-out table",
+          "12v refrigerator and Propane cooktop",
+          "Deep sink with flexible hose Designer backsplash Microwave Oven",
+          "Double Induction Stove",
+          "Multiple-Tier Compartment Pantry and Deep Drawers",
+          "Acrylic solid surface countertop and under-cabinet LED lights"
+        ]
+      },
+      {
+        "category": "Water System",
+        "items": [
+          "30-gal freshwater tank",
+          "20-gal grey water tank",
+          "Hot & cold water",
+          "Activated carbon block filter",
+          "Glycol combined air and water diesel heater",
+          "Rolling Door and Aluminum shower and portable toilet"
+        ]
+      },
+      {
+        "category": "Seating and Sleeping",
+        "items": [
+          "360° swivel Double seats with comfortable seatbelts and 2 Swivel tables",
+          "Couch and Reading Lights",
+          "Dinette area convertible to Lower bed",
+          "Elevator bed with expandable sides",
+          "Double bench seat behind driver, reclines and converts to bed",
+          "Additional convertible seat for one or two people"
+        ]
+      }
+    ]
+  }
+},
+{
+"extracted_data": {
+"vehicle_listing": {
+"title": "San Clemente",
+"description": "San Clemente Camper Van Built for adventures, this versatile van features a cozy sleeping area, ample storage, and a functional kitchenette, making it perfect for life on the move.",
+"subtitle": "Our Exclusive Flagship In Van",
+"price": null,
+"specifications": {
+"make_model": "2024 Mercedes-Benz Sprinter",
+"wheelbase": "170",
+"drivetrain": "AWD",
+"capacity": {
+"sits": "4",
+"sleeps": "4"
+}
+}
+},
+"gallery": [
+"/images/tild3538-6665-4230-a330-393730386433__image.png",
+"/images/tild6333-3365-4863-b836-646438636230__photo_2025-02-18_12-.jpg",
+"/images/tild3736-3131-4735-a336-363932346466__photo_2025-02-18_11-.jpg",
+"/images/tild3962-6663-4666-b964-633663656534__photo_2025-02-18_11-.jpg",
+"/images/tild3235-3664-4063-b561-353466373836__photo_2025-02-18_12-.jpg",
+"/images/tild3333-6533-4633-a566-346438656261__photo_2025-02-18_12-.jpg",
+"/images/tild6534-6137-4537-b639-356137383539__photo_2025-02-18_12-.jpg"
+],
+"media": {
+"video": {
+"title": "Big Bear Vans: Building the Dream",
+"platform": "YouTube",
+"id": "X1JxPs7eED8"
+}
+},
+"detailed_features": [
+{
+"category": "Exterior & Interior",
+"items": [
+"Large Storage cabinets with multiple removable shelves and Audio system",
+"Unique flooring & wall Skylight roof with mosquito net and blackout screen",
+"Bike tubes and large expedition-style storage box",
+"WeBoost Antenna on Decking and projector screen",
+"Bump-outs, Raptor coated with insulated",
+"Electric AMP Slip research steps",
+"Awning-style double-glazed windows",
+"Wall Cabinets with Wavy design"
+]
+},
+{
+"category": "Kitchen",
+"items": [
+"Pop-up countertop extension Outdoor fold-out table",
+"Hidden 3.3 cu ft, 12v refrigerator Propane cooktop",
+"Deep sink with flexible hose Designer backsplash Microwave Oven",
+"Double Induction Stove",
+"Muliple-Tier Compartment Pantry and Deep Drawers",
+"Acrylic solid surface countertop and under cabin LED lights"
+]
+},
+{
+"category": "Water System",
+"items": [
+"30-gal freshwater tank",
+"20-gal grey water tank",
+"Hot & cold water",
+"Activated carbon block filter",
+"Glycol combined air and water diesel heater",
+"Rolling Door and Aluminum shower and portable toilet"
+]
+},
+{
+"category": "Electrics",
+"items": [
+"12V 40 A DC-DC battery charger",
+"800 amp hours of off-grid power",
+"Glycol heating system 12V A/C unit",
+"200W Solar panel",
+"110V Shore power connector Fan",
+"Motorized awning and pioneer Subwoofer"
+]
+},
+{
+"category": "Seating and Sleeping",
+"items": [
+"360° swivel Double seats with comfortable seatbelts and 2 Swivel tables",
+"Pet couch and Reading Lights",
+"Dinette area convertible to bed Elevator bed"
+]
+},
+{
+"category": "Insulation and Paneling",
+"items": [
+"Fibre-insulated doors & windows",
+"Wood panel ceilings & walls",
+"Composite decks"
+]
+}
+]
+}
+},
+{
+  "extracted_data": {
+    "vehicle_listing": {
+      "title": "San Clemente",
+      "description": "San Clemente Camper Van Built for adventures, this versatile van features a cozy sleeping area, ample storage, and a functional kitchenette, making it perfect for life on the move.",
+      "subtitle": "My Custom Van",
+      "price": null,
+      "specifications": {
+        "make_model": "2024 Mercedes-Benz Sprinter",
+        "wheelbase": "170",
+        "drivetrain": "AWD",
+        "capacity": {
+          "sits": "4",
+          "sleeps": "4"
+        }
+      }
+    },
+    "gallery": [
+      "/images/tild3332-3633-4238-b834-366366323037__image.png",
+      "/images/tild6234-6533-4534-a265-386534313834__photo_2025-02-18_14-.jpg",
+      "/images/tild3937-6530-4039-b433-346236306231__photo_2025-02-18_14-.jpg",
+      "/images/tild3736-6234-4264-b962-386232393462__photo_2025-02-18_14-.jpg",
+      "/images/tild3733-3938-4638-b862-333131613339__photo_2025-02-18_14-.jpg",
+      "/images/tild3333-6533-4633-a566-346438656261__photo_2025-02-18_12-.jpg",
+      "/images/tild6534-6137-4537-b639-356137383539__photo_2025-02-18_12-.jpg",
+      "/images/tild3239-3862-4665-a261-353934343635__2025-03-17_13.png",
+      "/images/tild3036-6134-4837-a637-376634343133__2025-03-17_18.png",
+      "/images/tild3266-3936-4662-b261-656164336439__2025-03-17_11.png",
+      "/images/tild3765-3532-4230-b833-663432646331__2025-03-17_14.png",
+      "/images/tild3661-3865-4239-b830-363933393666__2025-03-17_8.png",
+      "/images/tild6366-3165-4237-b339-356439333463__2025-03-17_3.png",
+      "/images/tild3430-6636-4232-a131-653032356663__2025-03-17_9.png"
+    ],
+    "media": {
+      "video": {
+        "title": "Big Bear Vans: Building the Dream",
+        "platform": "YouTube",
+        "id": "bMx4MFvES5k"
+      }
+    },
+    "detailed_features": [
+      {
+        "category": "Exterior & Interior",
+        "items": [
+          "Large Storage cabinets with multiple removable shelves and Audio system",
+          "Unique flooring & wall Skylight roof with mosquito net and blackout screen",
+          "Bike tubes and large expedition-style storage box",
+          "WeBoost Antenna on Decking and projector screen",
+          "Bump-outs, Raptor coated with insulated",
+          "Electric AMP Slip research steps",
+          "Awning-style double-glazed windows",
+          "Wall Cabinets with Wavy design"
+        ]
+      },
+      {
+        "category": "Kitchen",
+        "items": [
+          "Pop-up countertop extension Outdoor fold-out table",
+          "Hidden 3.3 cu ft, 12v refrigerator Propane cooktop",
+          "Deep sink with flexible hose Designer backsplash and Built-in microwave Oven",
+          "Double Induction Stove",
+          "Muliple-Tier Compartment Pantry and Deep Drawers",
+          "Acrylic solid surface countertop and under cabin LED lights"
+        ]
+      },
+      {
+        "category": "Water System",
+        "items": [
+          "30-gal freshwater tank",
+          "20-gal grey water tank",
+          "Hot & cold water",
+          "Activated carbon block filter",
+          "Glycol combined air and water diesel heater",
+          "Rolling Door and Aluminum shower and portable toilet"
+        ]
+      },
+      {
+        "category": "Electrics",
+        "items": [
+          "12V 40 A DC-DC battery charger",
+          "800 amp hours of off-grid power",
+          "Glycol heating system 12V A/C unit",
+          "200W Solar panel",
+          "110V Shore power connector Fan",
+          "Motorized awning and pioneer Subwoofer"
+        ]
+      },
+      {
+        "category": "Seating and Sleeping",
+        "items": [
+          "360° swivel Double seats with comfortable seatbelts and 2 Swivel tables",
+          "Pet couch and Reading Lights",
+          "Dinette area convertible to bed Elevator bed"
+        ]
+      },
+      {
+        "category": "Insulation and Paneling",
+        "items": [
+          "Fibre-insulated doors & windows",
+          "Wood panel ceilings & walls",
+          "Composite decks"
+        ]
+      }
+    ]
+  }
+},
+{
+  "extracted_data": {
+    "vehicle_listing": {
+      "title": "Calavera",
+      "description": "A family-friendly layout designed on a 170 Sprinter van With a cozy dinette, elevator bed, and smart storage, it’s designed for adventure without compromise. This pet-friendly van comes with a dedicated couch for pets and a separate refrigerator for animal food. With the portable toilet, Cusco has an incredible storage capacity and a larger deck.",
+      "subtitle": "A blend of luxury and Style",
+      "price": null,
+      "specifications": {
+        "make_model": "2024 Mercedes-Benz Sprinter",
+        "wheelbase": "170",
+        "drivetrain": "AWD",
+        "capacity": {
+          "sits": "4",
+          "sleeps": "4"
+        }
+      }
+    },
+    "gallery": [
+      "/images/tild6238-6239-4334-b737-623831633930__untitled_design_1.jpg",
+      "/images/tild6336-3933-4264-a366-613665366337__img_0737.jpg",
+      "/images/tild3866-6265-4562-a431-303332336261__img_0741.jpg",
+      "/images/tild3632-3866-4163-b830-626561363231__img_0747.jpg",
+      "/images/tild6361-6239-4439-a639-653539353235__img_0763.jpg",
+      "/images/tild3832-3866-4261-b466-376237303533__img_0772.jpg",
+      "/images/tild6238-3031-4330-b566-653262353330__img_6040.jpg",
+      "/images/tild3133-3530-4930-a136-616635613636__img_6085.jpg",
+      "/images/tild3566-3233-4936-a264-623439663935__img_6309.jpg"
+    ],
+    "detailed_features": [
+      {
+        "category": "Insulation and Paneling",
+        "items": [
+          "Fibre-insulated doors & windows",
+          "Wood panel ceilings & walls",
+          "Composite decks"
+        ]
+      },
+      {
+        "category": "Electrics",
+        "items": [
+          "12V 40 A DC-DC battery charger",
+          "800 amp hours of off-grid power",
+          "Glycol heating system 12V A/C unit",
+          "Solar panel",
+          "110V Shore power connector Fan"
+        ]
+      },
+      {
+        "category": "Water System",
+        "items": [
+          "30-gal freshwater tank",
+          "20-gal grey water tank",
+          "Hot & cold water",
+          "Activated carbon block filter"
+        ]
+      },
+      {
+        "category": "Seating and Sleeping",
+        "items": [
+          "360° swivel seats",
+          "Pet couch",
+          "Dinette area convertible to bed Elevator bed"
+        ]
+      },
+      {
+        "category": "Kitchen",
+        "items": [
+          "Pop-up countertop extension Outdoor fold-out table",
+          "Hidden 3.3 cu ft, 12v refrigerator Propane cooktop",
+          "Oven",
+          "Deep sink with flexible hose Designer backsplash Microwave"
+        ]
+      },
+      {
+        "category": "Interior",
+        "items": [
+          "Storage cabinets Audio system Full size mirror",
+          "Unique flooring & wall Skylight roof",
+          "Lagun tables Electric swivel tables",
+          "Light bars"
+        ]
+      },
+      {
+        "category": "Exterior",
+        "items": [
+          "Outdoor shower Portable outdoor toilet Electric awning",
+          "Roof top decking Bike carrier weBoost antenna"
+        ]
+      }
+    ]
+  }
+},
+{
+
+  "extracted_data": {
+    "vehicle_listing": {
+      "title": "Portland",
+      "description": "A compact cargo van with a well-lit interior and bamboo touch up is ready for the all-terrain adventurous journey.",
+      "subtitle": "A blend of luxury and Style",
+      "price": null,
+      "specifications": {
+        "make_model": "2022 Mercedes-Benz Sprinter",
+        "wheelbase": "144",
+        "drivetrain": "RWD",
+        "capacity": {
+          "sits": "3",
+          "sleeps": "3"
+        }
+      }
+    },
+    "gallery": [
+      "/images/tild6466-3964-4632-a564-326535316466__untitled_design_11.jpg",
+      "/images/tild6235-6239-4634-a564-643538356330__flow_img_20240910_10.jpeg",
+      "/images/tild6539-3332-4363-a236-666362306235__img_5368.jpg",
+      "/images/tild6435-3365-4937-b165-656336623363__img_5369.jpg",
+      "/images/tild3631-3233-4537-b032-663239396436__flow_img_20240910_10.jpeg",
+      "/images/tild3263-3965-4130-b732-616264653936__img_5370.jpg",
+      "/images/tild3064-3864-4032-b761-656562373336__img_5377.jpg",
+      "/images/tild6133-3033-4665-a465-316663663335__img_5339.jpg",
+      "/images/tild3735-3466-4430-b139-633731336163__img_5380.jpg",
+      "/images/tild3066-3539-4164-a666-303332353437__flow_img_20240910_10.jpeg",
+      "/images/tild3636-3132-4864-a333-376234643135__img_5384.jpg"
+    ],
+    "detailed_features": [
+      {
+        "category": "Insulation and Paneling",
+        "items": [
+          "4 season synthetic fibre insulated door panels",
+          "Wood panel ceilings & walls",
+          "Composite decks",
+          "Insulated double pane windows"
+        ]
+      },
+      {
+        "category": "Electrics",
+        "items": [
+          "On-board battery charger",
+          "800 amp hours Lithium battery",
+          "Glycol diesel water-air heating system",
+          "Shaded black 12V A/C unit",
+          "400 watts solar panel",
+          "110V shore power outlet",
+          "Maxx air fan",
+          "USB port for charging mobiles"
+        ]
+      },
+      {
+        "category": "Water System",
+        "items": [
+          "30-gal freshwater tank",
+          "25-gal grey water tank",
+          "Hot & cold water"
+        ]
+      },
+      {
+        "category": "Seating and Sleeping",
+        "items": [
+          "360° swivel seats",
+          "Sturdy elevator bed",
+          "Dinette area convertible to bed"
+        ]
+      },
+      {
+        "category": "Kitchen",
+        "items": [
+          "Bamboo countertop & backsplash",
+          "Drop-leaf table extensions",
+          "Single induction cooktop",
+          "Deep sink with pull-out faucet",
+          "Cup rinser & soap dispenser",
+          "Pull-out pantry",
+          "Outdoor fold-out table",
+          "Hidden 3.3 cu ft,12V refrigerator",
+          "110V Microwave"
+        ]
+      },
+      {
+        "category": "Interior",
+        "items": [
+          "Grey & white palette layout",
+          "Wooden floors",
+          "Closet with hangers",
+          "Lightings with dimmer options",
+          "Detachable projector screen",
+          "Swivel tables",
+          "Storage Cabinets"
+        ]
+      },
+      {
+        "category": "Exterior",
+        "items": [
+          "KO3 beefy all-terrain tires",
+          "Falcon shock absorber",
+          "Flares for extra width",
+          "Ladder for rooftop access",
+          "Tire carrier & expedition box",
+          "External perimeter lightings",
+          "Portable camping toilet",
+          "Open-air shower",
+          "Electric awning"
+        ]
+      }
+    ]
+  }
+}
+  ]

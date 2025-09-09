@@ -1,0 +1,374 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+/* Starlight Background Animation */
+.starlight-bg {
+  position: relative;
+  overflow: hidden;
+  /* Make sure the container is large enough */
+}
+
+.starlight-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px) no-repeat;
+  background-size: 50px 50px; /* Adjust spacing of the stars */
+  animation: move-bg 60s linear infinite;
+}
+
+@keyframes move-bg {
+  from { background-position: 0 0; }
+  to { background-position: 5000px 5000px; } /* Adjust these values for speed/direction */
+}
+
+/* Glitch Effect on Text */
+.glitch-effect {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.glitch-effect:hover {
+  text-shadow: 2px 2px #ff00c1, -2px -2px #00fff2;
+  animation: glitch-anim 0.3s steps(2, end) infinite alternate;
+}
+
+.glitch-effect:hover::before,
+.glitch-effect:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  text-shadow: none;
+  clip-path: inset(0 0 0 0);
+  background: #140AFF;
+}
+
+.glitch-effect:hover::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  animation: glitch-anim-2 0.3s steps(2, end) infinite alternate;
+}
+
+.glitch-effect:hover::after {
+  left: -2px;
+  text-shadow: -2px 0 #00fff2;
+  animation: glitch-anim-3 0.3s steps(2, end) infinite alternate;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip-path: inset(30% 0 35% 0);
+  }
+  20% {
+    clip-path: inset(45% 0 20% 0);
+  }
+  40% {
+    clip-path: inset(60% 0 10% 0);
+  }
+  60% {
+    clip-path: inset(10% 0 75% 0);
+  }
+  80% {
+    clip-path: inset(80% 0 5% 0);
+  }
+  100% {
+    clip-path: inset(15% 0 35% 0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip-path: inset(15% 0 65% 0);
+  }
+  20% {
+    clip-path: inset(80% 0 5% 0);
+  }
+  40% {
+    clip-path: inset(30% 0 30% 0);
+  }
+  60% {
+    clip-path: inset(65% 0 20% 0);
+  }
+  80% {
+    clip-path: inset(5% 0 85% 0);
+  }
+  100% {
+    clip-path: inset(25% 0 65% 0);
+  }
+}
+
+@keyframes glitch-anim-3 {
+  0% {
+    clip-path: inset(70% 0 10% 0);
+  }
+  20% {
+    clip-path: inset(20% 0 60% 0);
+  }
+  40% {
+    clip-path: inset(80% 0 5% 0);
+  }
+  60% {
+    clip-path: inset(10% 0 80% 0);
+  }
+  80% {
+    clip-path: inset(50% 0 10% 0);
+  }
+  100% {
+    clip-path: inset(10% 0 70% 0);
+  }
+}
+
+
+
+/* ... (your existing Tailwind CSS imports and custom properties) ... */
+
+/* Animated Gradient for Buttons */
+.bg-gradient-animated {
+  background: linear-gradient(
+    -45deg,
+    #534bff, /* Lighter blue */
+    #140aff, /* Darker blue */
+    #534bff,
+    #140aff
+  );
+  background-size: 400% 400%; /* Make the gradient larger than the element */
+  animation: gradientAnimation 10s ease infinite; /* Adjust time for speed */
+  transition: all 0.3s ease; /* Smooth transition for potential hover effects */
+}
+
+/* Hover effect: make the gradient animate faster or change direction */
+.group:hover .bg-gradient-animated {
+  animation: gradientAnimation 5s ease infinite; /* Faster animation on hover */
+  /* You could also change background-position or add other effects */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Ensure button text is above the animated background */
+.group {
+    position: relative;
+    z-index: 1; /* Ensure button itself is a stacking context */
+}
+.group span.relative {
+    position: relative;
+    z-index: 2; /* Text over the gradient */
+    color: white; /* Ensure text color is white on the blue gradient */
+}
+
+/* Base colors for Dark Mode */
+:root {
+  --background: #0d0d1e;
+  --foreground: #eef1f7;
+  --primary: #5a74ff;
+  --primary-glow: #8e9bff;
+  --secondary: #a9b7c8;
+  --accent: #ff4d6a;
+}
+
+/* Light Mode colors */
+:root:not(.dark) {
+  --background: #f0f4f9;
+  --foreground: #1c2738;
+  --primary: #2979ff;
+  --primary-glow: #1a4199;
+  --secondary: #4a5d7c;
+  --accent: #e53e5d;
+}
+
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-geist-sans, sans-serif);
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+}
+
+/* Keyframes for glowing effect */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(90, 116, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 10px 4px rgba(90, 116, 255, 0.6);
+  }
+}
+
+.glow {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+/* In your CSS file (e.g., globals.css) */
+
+.curved-separator {
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  /* The values define the vertices of the shape.
+     (0 0) is top-left, (100% 0) is top-right,
+     (100% 95%) is bottom-right shifted up,
+     (0 100%) is bottom-left. */
+}
+/* src/app/globals.css */
+
+
+
+@layer components {
+  /* Animated Gradient for Text */
+  .bg-gradient-text {
+    background-image: linear-gradient(-45deg, #800080, #534BFF, #800080, #534BFF);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 10s ease infinite;
+    display: inline-block; /* Essential for text to render correctly */
+  }
+}
+
+@layer utilities {
+  /* Keyframes for text animation */
+  @keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
+/* src/app/globals.css */
+
+@layer base {
+  /* ... your existing base styles ... */
+}
+
+@layer components {
+  /* Animated Gradient for Buttons */
+  .bg-gradient-button {
+    background-image: linear-gradient(-45deg, #534BFF, #140AFF, #534BFF, #140AFF);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite; /* Adjust time for speed */
+  }
+
+  /* Animated Gradient for Text */
+  .bg-gradient-text {
+    background-image: linear-gradient(-45deg, #800080, #534BFF, #800080, #534BFF);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 10s ease infinite;
+    display: inline-block;
+  }
+}
+
+@layer utilities {
+  /* Keyframes for button animation */
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Keyframes for text animation */
+  @keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
+/* src/app/globals.css */
+
+@layer base {
+  /* ... your existing base styles ... */
+}
+
+@layer components {
+  /* Animated Gradient for Buttons */
+  .bg-gradient-button {
+    background-image: linear-gradient(-45deg, #800080, #534BFF, #800080, #534BFF);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite; /* Adjust time for speed */
+  }
+
+  /* Animated Gradient for Text */
+  .bg-gradient-text {
+    background-image: linear-gradient(-45deg, #800080, #534BFF, #800080, #534BFF);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 10s ease infinite;
+    display: inline-block;
+  }
+}
+
+@layer utilities {
+  /* Keyframes for button animation */
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Keyframes for text animation */
+  @keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
+/* src/app/globals.css */
+
+@layer components {
+  .bg-gradient-button {
+    background-image: linear-gradient(-45deg, #534BFF, #140AFF, #534BFF, #140AFF);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite; /* Adjust time for speed */
+  }
+
+  .bg-gradient-text {
+    background-image: linear-gradient(-45deg, #800080, #534BFF, #800080, #534BFF);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 10s ease infinite;
+    display: inline-block;
+  }
+}
+
+@layer utilities {
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}

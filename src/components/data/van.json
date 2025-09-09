@@ -1,0 +1,555 @@
+[
+    {
+
+        "vehicle_listing": {
+            "title": "4X4 Santa Monica V6 Turbo",
+            "description": "The 4X4 Santa Monica V6 Turbo delivers unstoppable performance with a turbocharged V6 and advanced 4WD. Built for adventure, it’s perfect for both off-road trails and city streets.",
+            "subtitle": "Power, performance, and versatility in one rugged ride.",
+            "specifications": {
+                "make_model": "2022 Mercedes-Benz Sprinter",
+                "wheelbase": "144",
+                "drivetrain": "4X4",
+                "capacity": {
+                    "sits": "2 - 7",
+                    "sleeps": "2 - 7"
+                }
+            }
+        },
+        "sold": false,
+        "gallery": [
+            "/images/tild3937-6338-4335-a164-363930363465__photo_mar_09_2025_18.jpg",
+            "/images/tild6437-6162-4137-b262-316132333331__photo_mar_09_2025_18.jpg",
+            "/images/tild6233-6635-4433-b363-623363663262__photo_mar_09_2025_18.jpg",
+            "/images/tild3331-3235-4766-a463-653932373937__photo_mar_09_2025_18.jpg",
+            "/images/tild6465-3732-4466-a132-386630303064__photo_mar_09_2025_18.jpg",
+            "/images/tild3832-3339-4938-b166-616666623331__photo_mar_09_2025_19.jpg",
+            "/images/tild3266-3239-4461-b663-356662323236__photo_mar_09_2025_19.jpg",
+            "/images/tild6561-6432-4633-b333-353034656262__photo_mar_09_2025_19.jpg",
+            "/images/tild6463-6366-4935-b436-333436376234__photo_mar_09_2025_18.jpg",
+            "/images/tild6431-6438-4764-a532-376566373234__photo_mar_09_2025_18.jpg",
+            "/images/tild3631-6433-4766-a662-396562323532__photo_mar_09_2025_19.jpg",
+            "/images/tild3763-3564-4562-b839-633936323138__photo_mar_09_2025_19.jpg"
+        ],
+        "detailed_features": [
+            {
+                "category": "Insulation and Paneling",
+                "items": [
+                    "4 season Thinsulate insulation one-of-a-kind",
+                    "Slatted wooden ceiling and walls panels",
+                    "Marine style heavy duty flooring"
+                ]
+            },
+            {
+                "category": "Water System",
+                "items": [
+                    "30-gal freshwater tank",
+                    "22-gal grey water tank",
+                    "Aluminum shower with L tracks and toilet (dry-flush or separating)",
+                    "All metal faucet and shower head with on/off function"
+                ]
+            },
+            {
+                "category": "Electrics",
+                "items": [
+                    "600-1600 amp hours lithium batteries",
+                    "2000 w pure sine inverter & up to 350 w solar",
+                    "Shore 30 amp power",
+                    "Combined DCDC charger and solar controller",
+                    "110 v outlets with USB C and A ports",
+                    "12v reading light with USB charging ports",
+                    "Glycol combined diesel water & air heater",
+                    "12 v efficient A/C that works of the batteries"
+                ]
+            },
+            {
+                "category": "Seating and Sleeping",
+                "items": [
+                    "Double bench behind the driver, reclinable, with extra storage and proper seat belts",
+                    "5th extra click in seat is available",
+                    "Elevator bed with expandable to the sides into the flares, custom mattress",
+                    "Dinette transformer to another full size bed",
+                    "Double seat up front that folds flat into bed"
+                ]
+            },
+            {
+                "category": "Kitchen",
+                "items": [
+                    "12v 3.2 cu ft fridge and freezer",
+                    "Induction cooktop and built in microwave",
+                    "Deep sink with an insert and drainer",
+                    "Functional drawers and a pull out pantry",
+                    "Pop up countertop extension, pull out chopping board",
+                    "Beautiful aluminum backsplash",
+                    "Wall cabinet with shelves"
+                ]
+            },
+            {
+                "category": "Exterior",
+                "items": [
+                    "Side ladder",
+                    "Roof deck with a foldable hammock",
+                    "Motorized awning",
+                    "Double glazed awning style windows with built in black out curtains and mosquito nets",
+                    "Flares raptor painted with insulated inserts"
+                ]
+            }
+        ]
+    },
+    {
+
+        "vehicle_listing": {
+            "title": "NEW AWD Montreal 170 crew Sprinter",
+            "subtitle": "VAN TRAVEL MANUAL",
+            "model_name": "Montreal",
+            "price": "$197,700",
+            "status": "BUILD IS IN PROGRESS...",
+            "tagline": "Our Exclusive Flagship Van",
+            "description": "Introducing the epitome of adventure: the camper van AWD Montreal 170 Crew Sprinter, where every journey is a manual masterpiece crafted from high-quality components. This camper van isn't just a vehicle; it's an invitation to embrace the thrill of active recreation and the freedom of the open road. Discover the ultimate in van life luxury with our fully-loaded AWD 170 Crew Sprinter Van. This exceptional model features original factory Mercedes DOT-approved seating for five, making it perfect for family adventures or group travels."
+        },
+        "sold": true,
+        "gallery": [
+            "/images/tild3539-3839-4338-a438-353337643665__image_2023-12-15_131.jpg",
+            "/images/tild6531-3364-4962-a330-623066366632__image_2023-12-15_131.jpg",
+            "/images/tild6364-3533-4065-b963-653230616335__image_2023-12-15_131.jpg",
+            "/images/tild3963-3032-4135-b338-326431633430__image_2023-12-13_152.jpg",
+            "/images/tild3735-3438-4330-b438-303339323735__image_2023-12-13_152.jpg",
+            "/images/tild6531-3763-4566-a663-623530663134__image_2023-12-15_131.jpg",
+            "/images/tild6436-3130-4535-b337-353763643632__image_2023-12-15_131.jpg",
+            "/images/tild6265-6463-4265-a335-386536633531__image_2023-12-13_152.jpg",
+            "/images/tild6333-6231-4236-b137-323231303936__image_2023-12-13_152.jpg",
+            "/images/tild6635-6166-4133-a162-353237336161__image_2023-12-13_152.jpg",
+            "/images/tild3636-6536-4636-b865-306334356664__image_2023-12-15_131.jpg",
+            "/images/tild6135-3536-4962-b934-373765656638__image_2023-12-15_131.jpg",
+            "/images/tild3737-3337-4737-b933-666130396162__image_2023-12-15_131.jpg",
+            "/images/tild3837-3533-4537-b036-313736633164__image_2023-12-15_131.jpg"
+        ],
+        "media": {
+            "video": {
+                "title": "Big Bear Vans: Building the Dream",
+                "platform": "YouTube",
+                "id": "Ydtby7ppin8"
+            }
+        },
+        "detailed_features": [
+            {
+                "category": "Paneling and Insulation",
+                "items": [
+                    "4 season Thinsulate insulation",
+                    "One-of-a-kind slatted wooden ceiling and walls panels",
+                    "Marine style heavy duty flooring"
+                ]
+            },
+            {
+                "category": "Electrical System",
+                "items": [
+                    "700 amp hours lithium batteries",
+                    "2000 w pure sine inverter & up to 350 w solar",
+                    "Shore 30 amp power",
+                    "Combined DCDC charger and solar controller",
+                    "110v outlets with USB C and A ports",
+                    "12v reading light with USB charging ports"
+                ]
+            },
+            {
+                "category": "Heating and Cooling",
+                "items": [
+                    "Glycol combined diesel water & air heater",
+                    "12v efficient A/C that works off the batteries"
+                ]
+            },
+            {
+                "category": "Water System",
+                "items": [
+                    "30 gal of fresh water",
+                    "22 gal of grey water",
+                    "Aluminum shower with L tracks and toilet (dry-flush or separating)",
+                    "All metal faucet and shower head with on/off function"
+                ]
+            },
+            {
+                "category": "Seating",
+                "items": [
+                    "3-seater behind the driver, reclinable, with extra storage and proper seat belts"
+                ]
+            },
+            {
+                "category": "Sleeping",
+                "items": [
+                    "Elevator bed with expandable to the sides into the flares, custom mattress",
+                    "Dinette transformer to another full size bed"
+                ]
+            },
+            {
+                "category": "Kitchen",
+                "items": [
+                    "Tall 12v fridge and freezer",
+                    "Induction cooktop and built in microwave",
+                    "Deep sink with an insert and drainer",
+                    "High pull out faucet",
+                    "Functional drawers and a pull out pantry",
+                    "Pop up countertop extension, pull out chopping board",
+                    "Beautiful aluminum backsplash",
+                    "Wall cabinet with shelves"
+                ]
+            },
+            {
+                "category": "Exterior",
+                "items": [
+                    "Side ladder",
+                    "Roof deck with a foldable hammock",
+                    "Motorized awning",
+                    "Double glazed awning style windows",
+                    "Flares raptor painted with insulated inserts"
+                ]
+            }
+        ]
+    },
+    {
+
+        "vehicle_listing": {
+            "title": "AWD 144 Sprinter Santa Monica",
+            "description": "Experience ultimate family travel in the Santa Monica Layout AWD 144 Sprinter, designed to comfortably sleep up to five with convertible seating and a modern wet bath.",
+            "subtitle": "Versatile Comfort for Unforgettable Family Adventures",
+            "price": "$224,543",
+            "specifications": {
+                "make_model": "2022 Mercedes-Benz Sprinter",
+                "wheelbase": "144",
+                "drivetrain": "AWD",
+                "capacity": {
+                    "sits": "2 - 5",
+                    "sleeps": "2 - 5"
+                }
+            }
+        },
+        "sold": true,
+        "feature_highlights": [
+            {
+                "title": "Convertible Living",
+                "description": "Our innovative living area features an elevator bed that seamlessly rises to create a comfortable sleeping space, paired with a dinette area complete with storage benches. The versatile swivel table easily transforms into an additional bed, maximizing space and ensuring a flexible, multi-functional interior."
+            },
+            {
+                "title": "Robust Electrical System",
+                "description": "Power your adventures with confidence using a robust 1200 amp-hour electrical system. Integrated solar panels, along with shore power and alternator charging options, provide a reliable and versatile energy source that keeps your van running smoothly off-grid."
+            },
+            {
+                "title": "Spacious Roof Deck",
+                "description": "Step onto a functional roof that offers a spacious decking area, perfect for outdoor relaxation. Complete with hammocks, a side ladder, and a roof rack equipped with a light bar, this area transforms your van into a versatile outdoor oasis for stargazing, lounging, and enjoying the open air."
+            },
+            {
+                "title": "Year-Round Comfort",
+                "description": "Power your adventures with confidence using a robust 1200 amp-hour electrical system. Integrated solar panels, along with shore power and alternator charging options, provide a reliable and versatile energy source that keeps your van running smoothly off-grid."
+            },
+            {
+                "title": "Advanced Climate Control",
+                "description": "Stay comfortable in any weather with our 12V roof-mounted air conditioning system. This is paired with an advanced glycol diesel water and air heater that ensures efficient warmth during colder conditions, creating a perfectly balanced climate control solution for your travels."
+            }
+        ],
+        "detailed_features": [
+            {
+                "category": "Insulation and Paneling",
+                "items": [
+                    "4 season 3M Thinsulate Insulation",
+                    "Lightweight Stained Wall and Ceiling Panels"
+                ]
+            },
+            {
+                "category": "Water System",
+                "items": [
+                    "30 gallons of fresh water",
+                    "20 gallon of grey water under mount",
+                    "Aluminum shower and portable toilet"
+                ]
+            },
+            {
+                "category": "Electrics",
+                "items": [
+                    "1200 aH lithium batteries",
+                    "12v Roof-mounted air conditioner",
+                    "200-400 watt solar panels",
+                    "Advanced glycol water and air heater",
+                    "DCDC charger, 30 amp shore power"
+                ]
+            },
+            {
+                "category": "Seating and Sleeping",
+                "items": [
+                    "Double extra seat that swivels OR a storage bench (layout for 2)"
+                ]
+            },
+            {
+                "category": "Interior",
+                "items": [
+                    "Elevator bed with expandable side with three fold mattress",
+                    "Dinette that transforms into another bed area",
+                    "Three tables",
+                    "Wide-slatted panels for rear door",
+                    "Insulated flares with LED reading lights"
+                ]
+            },
+            {
+                "category": "Exterior",
+                "items": [
+                    "Roof rack with decking and side ladder",
+                    "Rooftop terrace with a hammock",
+                    "Motorized legless awning",
+                    "Electrical running board",
+                    "Light bar (front and/or back)"
+                ]
+            }
+        ],
+        "gallery": [
+            "/images/tild3861-6633-4536-b434-373039386166__photo_mar_09_2025_19.jpg",
+            "/images/tild3565-3036-4630-b332-333666393965__photo_mar_09_2025_19.jpg",
+            "/images/tild6330-3264-4664-b462-396361306362__photo_mar_07_2025_19.jpg",
+            "/images/tild3434-3465-4866-b439-353232643663__photo_mar_09_2025_19.jpg",
+            "/images/tild6430-6333-4333-a363-316138323531__photo_mar_09_2025_18.jpg",
+            "/images/tild6630-3330-4238-b035-323537623032__photo_mar_07_2025_19.jpg",
+            "/images/tild6437-6162-4137-b262-316132333331__photo_mar_09_2025_18.jpg",
+            "/images/tild6233-6635-4433-b363-623363663262__photo_mar_09_2025_18.jpg",
+            "/images/tild3331-3235-4766-a463-653932373937__photo_mar_09_2025_18.jpg",
+            "/images/tild6465-3732-4466-a132-386630303064__photo_mar_09_2025_18.jpg",
+            "/images/tild3832-3339-4938-b166-616666623331__photo_mar_09_2025_19.jpg",
+            "/images/tild3266-3239-4461-b663-356662323236__photo_mar_09_2025_19.jpg",
+            "/images/tild6561-6432-4633-b333-353034656262__photo_mar_09_2025_19.jpg",
+            "/images/tild6463-6366-4935-b436-333436376234__photo_mar_09_2025_18.jpg",
+            "/images/tild6431-6438-4764-a532-376566373234__photo_mar_09_2025_18.jpg",
+            "/images/tild3631-6433-4766-a662-396562323532__photo_mar_09_2025_19.jpg",
+            "/images/tild3763-3564-4562-b839-633936323138__photo_mar_09_2025_19.jpg"
+        ]
+    },
+    {
+
+        "vehicle_listing": {
+            "title": "NEW AWD Montreal 170 crew Sprinter",
+            "description": "Introducing the epitome of adventure: the camper van AWD Montreal 170 Crew Sprinter, where every journey is a manual masterpiece crafted from high-quality components. This camper van isn't just a vehicle; it's an invitation to embrace the thrill of active recreation and the freedom of the open road. Discover the ultimate in van life luxury with our fully-loaded AWD 170 Crew Sprinter Van. This exceptional model features original factory Mercedes DOT-approved seating for five, making it perfect for family adventures or group travels.",
+            "subtitle": "VAN TRAVEL MANUAL",
+            "price": "$197,700",
+            "status": "BUILD IS IN PROGRESS...",
+            "tagline": "Our Exclusive Flagship Van",
+            "model_name": "Montreal"
+        },
+        "sold": false,
+        "gallery": [
+            "/images/tild3539-3839-4338-a438-353337643665__image_2023-12-15_131.jpg",
+            "/images/tild6531-3364-4962-a330-623066366632__image_2023-12-15_131.jpg",
+            "/images/tild6364-3533-4065-b963-653230616335__image_2023-12-15_131.jpg",
+            "/images/tild3963-3032-4135-b338-326431633430__image_2023-12-13_152.jpg",
+            "/images/tild3735-3438-4330-b438-303339323735__image_2023-12-13_152.jpg",
+            "/images/tild6531-3763-4566-a663-623530663134__image_2023-12-15_131.jpg",
+            "/images/tild6436-3130-4535-b337-353763643632__image_2023-12-15_131.jpg",
+            "/images/tild6265-6463-4265-a335-386536633531__image_2023-12-13_152.jpg",
+            "/images/tild6333-6231-4236-b137-323231303936__image_2023-12-13_152.jpg",
+            "/images/tild6635-6166-4133-a162-353237336161__image_2023-12-13_152.jpg",
+            "/images/tild3636-6536-4636-b865-306334356664__image_2023-12-15_131.jpg",
+            "/images/tild6135-3536-4962-b934-373765656638__image_2023-12-15_131.jpg",
+            "/images/tild3737-3337-4737-b933-666130396162__image_2023-12-15_131.jpg",
+            "/images/tild3837-3533-4537-b036-313736633164__image_2023-12-15_131.jpg"
+        ],
+        "media": {
+            "video": {
+                "title": "Big Bear Vans: Building the Dream",
+                "platform": "YouTube",
+                "id": "Ydtby7ppin8"
+            }
+        },
+        "detailed_features": [
+            {
+                "category": "Paneling and Insulation",
+                "items": [
+                    "4 season Thinsulate insulation",
+                    "One-of-a-kind slatted wooden ceiling and walls panels",
+                    "Marine style heavy duty flooring"
+                ]
+            },
+            {
+                "category": "Electrical System",
+                "items": [
+                    "700 amph lithium batteries",
+                    "2000 w pure sine inverter & up to 350 w solar",
+                    "Shore 30 amp power",
+                    "Combined DCDC charger and solar controller",
+                    "110v outlets with USB C and A ports",
+                    "12v reading light with USB charging ports"
+                ]
+            },
+            {
+                "category": "Heating and Cooling",
+                "items": [
+                    "Glycol combined diesel water & air heater",
+                    "12v efficient A/C that works off the batteries"
+                ]
+            },
+            {
+                "category": "Water System",
+                "items": [
+                    "30 gal of fresh water",
+                    "22 gal of grey water",
+                    "Aluminum shower with L tracks and toilet (dry-flush or separating)",
+                    "All metal faucet and shower head with on/off function"
+                ]
+            },
+            {
+                "category": "Seating",
+                "items": [
+                    "3-seater behind the driver, reclinable, with extra storage and proper seat belts"
+                ]
+            },
+            {
+                "category": "Sleeping",
+                "items": [
+                    "Elevator bed with expandable to the sides into the flares, custom mattress",
+                    "Dinette transformer to another full size bed"
+                ]
+            },
+            {
+                "category": "Kitchen",
+                "items": [
+                    "Tall 12v fridge and freezer",
+                    "Induction cooktop and built in microwave",
+                    "Deep sink with an insert and drainer",
+                    "High pull out faucet",
+                    "Functional drawers and a pull out pantry",
+                    "Pop up countertop extension, pull out chopping board",
+                    "Beautiful aluminum backsplash",
+                    "Wall cabinet with shelves"
+                ]
+            },
+            {
+                "category": "Exterior",
+                "items": [
+                    "Side ladder",
+                    "Roof deck with a foldable hammock",
+                    "Motorized awning",
+                    "Double glazed awning style windows",
+                    "Flares raptor painted with insulated inserts"
+                ]
+            }
+        ]
+    },
+    {
+
+        "vehicle_listing": {
+            "title": "RWD 148 white FORD transit high roof 2500",
+            "description": "NEW RWD 148 white FORD transit high roof 2500 ECO boost gas engine",
+            "subtitle": "VAN TRAVEL MANUAL",
+            "price": null,
+            "specifications": {
+                "make_model": "Ford Transit",
+                "wheelbase": "148",
+                "drivetrain": "RWD",
+                "engine": "ECO boost gas engine",
+                "capacity": {
+                    "sits": "2-3",
+                    "sleeps": "2-3"
+                }
+            }
+        },
+        "sold": true,
+        "feature_highlights": [
+            {
+                "title": "ECO boost gas engine",
+                "description": null
+            },
+            {
+                "title": "SITS AND SLEEPS 2-3 PEOPLE",
+                "description": null
+            },
+            {
+                "title": "Elevator FULL SIZE BED",
+                "description": null
+            },
+            {
+                "title": "HIDDEN IN A BENCH INDOOR BATHROOM",
+                "description": null
+            }
+        ],
+        "detailed_features": [
+            {
+                "category": "Vibro Insulation",
+                "items": [
+                    "4 season 3M Thinsulate insulation",
+                    "Tongue and groove ceiling and walls"
+                ]
+            },
+            {
+                "category": "Electrics",
+                "items": [
+                    "Lithium 300 amp hours battery",
+                    "Victron energy 2000 inverter",
+                    "DcDc charger from engine",
+                    "Solar controller",
+                    "110v outlets with usb type C and type A ports",
+                    "30 amp power inlet for shore power"
+                ]
+            },
+            {
+                "category": "Seating",
+                "items": [
+                    "Nice bench to enjoy the view",
+                    "Additional option: installation of a third seat"
+                ]
+            },
+            {
+                "category": "Water system",
+                "items": [
+                    "20 gal fresh water tank",
+                    "Under mount 20 gal grey water tank",
+                    "12v water pump Hydro accumulator",
+                    "Bosch water heater",
+                    "Pex uponor plumbing system",
+                    "Water inlet on a side of the van",
+                    "Cassette toilet",
+                    "Popup hidden inside shower with pull out curtain",
+                    "Outside rear shower too"
+                ]
+            },
+            {
+                "category": "Kitchen",
+                "items": [
+                    "Induction cooktop",
+                    "12v Fridge",
+                    "Kitchen 72” with deep sink workstation",
+                    "High faucet",
+                    "Functional drawers",
+                    "Wall cabinet"
+                ]
+            }
+        ],
+        "gallery": [
+            "/images/tild6334-6539-4166-b734-666662613637__52073894977.png",
+            "/images/tild3137-6332-4737-a466-343662356361__eyjidwnrzxqioij2yw5j.jpg",
+            "/images/tild3232-6330-4033-a639-306439393733__eyjidwnrzxqioij2yw5j.jpg",
+            "/images/tild3434-6563-4162-a639-346362633938__photo_2023-09-12_173.jpeg",
+            "/images/tild6637-6261-4430-b864-353032333732__eyjidwnrzxqioij2yw5j.jpg",
+            "/images/tild6432-6366-4332-b665-336362396334__image_2023-10-19_143.jpg",
+            "/images/tild6536-3336-4431-b063-663362663136__image_2023-10-19_143.jpg",
+            "/images/tild3336-6235-4635-b064-323861373533__image_2023-10-25_130.jpg",
+            "/images/tild6135-6130-4734-a336-663832393932__image_2023-10-25_131.jpg",
+            "/images/tild6237-3665-4664-b736-633233386331__image_2023-10-25_131.jpg",
+            "/images/tild6435-3234-4566-a136-636565316564__image_2023-10-19_143.jpg",
+            "/images/tild3031-6336-4966-a633-386365316634__image_2023-10-19_143.jpg",
+            "/images/tild3764-3736-4565-a638-323433656231__image_2023-10-19_143.jpg",
+            "/images/tild3761-6239-4636-a232-366363613965__image_2023-10-25_130.jpg",
+            "/images/tild3235-3131-4135-b831-396435616137__photo_2023-09-12_173.jpeg"
+        ],
+        "media": {
+            "video_gallery": [
+                {
+                    "title": "Big Bear Vans: Building the Dream",
+                    "platform": "YouTube",
+                    "id": "3azWEhUHY0A"
+                },
+                {
+                    "title": "Big Bear Vans: Building the Dream",
+                    "platform": "YouTube",
+                    "id": "-VX8RBK5NjY"
+                },
+                {
+                    "title": "Big Bear Vans: Building the Dream",
+                    "platform": "YouTube",
+                    "id": "g596HqLTwsw"
+                }
+            ]
+        }
+    }
+]
