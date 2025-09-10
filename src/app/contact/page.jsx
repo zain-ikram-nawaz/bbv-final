@@ -1,11 +1,11 @@
 "use client"
 import React from 'react'
-import ContactUs from '@/components/contact/contact'
+import Contact from '@/components/Contact/Contact'
 
 export default function page() {
   return (
     <div>
-<ContactUs/>
+<Contact/>
     </div>
   )
 }

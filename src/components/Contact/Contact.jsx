@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, CheckCircle, XCircle } from 'lucide-react';
 import { createRoot } from 'react-dom/client';
 
-const ContactUs = () => {
+const Contact = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -316,6 +316,6 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default Contact;
 
 
