@@ -207,7 +207,7 @@ export default function Hero() {
             />
           </h1>
           <p className="hero-subtitle text-lg md:text-xl text-gray-300 max-w-sm mb-8 mx-auto md:mx-0">
-          Buy, customize, or shop van accessories fromBig Bear Vans today
+          Buy, customize or shop van accessories from Big Bear Vans today.
           </p>
           {userLocation && (
             <p className="text-sm text-gray-400 mb-4">
@@ -226,7 +226,7 @@ export default function Hero() {
             >
               <span className="absolute inset-0 w-full h-full bg-gradient-animated z-0"></span>
               <Link href={"/contact"}>
-              <span className="relative text-white z-10">Your Custom Build</span>
+              <span className="relative text-white z-10">Custom Build</span>
               </Link>
             </button>
           </div>

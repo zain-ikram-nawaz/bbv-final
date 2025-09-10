@@ -151,7 +151,7 @@ const data = van && van.length > 0 ? van : dummyVans;
       </div>
 
       {/* Heading - Responsive font size */}
-      <div className="relative z-10 text-center mb-16 px-4">
+      <div className="relative z-10 text-center  mb-16 px-4">
         <h2
           ref={headingRef}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-extrabold tracking-tight leading-tight"
@@ -164,18 +164,18 @@ const data = van && van.length > 0 ? van : dummyVans;
         >
         Big Bear Vans
         </h2>
-        <p className="mt-4 text-sm sm:text-base md:text-xl text-gray-600">
+        <p className="mt-4 text-sm sm:text-base md:text-xl text-gray-600 md:px-10">
        It doesn’t matter if you’re a family with kids or pets looking for an off-road experience, a person wanting a mobile office with a view, or a retiree ready to roam the open road; we do custom van conversions according to the needs of our clients in California and the surrounding states.
         </p>
       </div>
-<div className="relative z-10 text-center mb-16 px-4">
+<div className="flex flex-col justify-center items-center z-10 text-center mb-16 px-4">
     <h2
           ref={headingRef}
-          className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl tracking-tight leading-tight"
+          className="text-2xl font-semibold sm:text-3xl md:text-3xl lg:text-4xl tracking-tight leading-tight"
         >
       Buy
         </h2>
-        <p className="mt-4 text-sm sm:text-base md:text-xl text-gray-600">
+        <p className="mt-4 text-sm sm:text-base md:text-xl text-gray-600 w-[60vw]">
     Want to hit the road sooner? Browse our inventory of vans for sale. Whether you’re looking for a fully equipped Ford Transit camper or Mercedes Sprinter 4x4, we’ve got you covered. Simply pay, sign, collect the keys, and drive away in your new mobile home. Skip the wait today. Your dream RV is just a click away.
         </p>
 </div>

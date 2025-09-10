@@ -19,6 +19,7 @@ import InvertedCurvedSeparator from "./InvertedCurvedSeparator";
 import InvertedCurvedSeparator2 from "./InvertedCurvedSeparator2";
 import InvertedCurvedSeparator3 from "./InvertedCurvedSeparator3";
 import InvertedCurvedSeparator4 from "./InvertedCurvedSeparator4";
+import Vector48 from "./vector48";
 import { getVan } from "@/api/van/van";
 export default async function Home() {
   const van = await getVan()
@@ -29,11 +30,14 @@ export default async function Home() {
       <Hero />
       <CurvedSeparator />
       <VanImage van={van} />
+        <InvertedCurvedSeparator />
       <CustomizeScreen />
-      <InvertedCurvedSeparator2 />
+    <CurvedSeparator4 bg="#534BFF"/>
+
+        <Vector48 bg='white' color="#000000"/>
       <Shop van={van} />
       <DreamDriveway />
-      <CurvedSeparator3 />
+      {/* <CurvedSeparator3 /> */}
       <InvertedCurvedSeparator />
       <WhyChooseUs />
       <InvertedCurvedSeparator3 />
@@ -45,7 +49,9 @@ export default async function Home() {
       <Blog />
       <InvertedCurvedSeparator4 />
       <BookingPage />
-      <CurvedSeparator3 />
+    <CurvedSeparator4 bg="#534BFF"/>
+        <Vector48 bg='#f0eded' color="#000000"/>
+
       <UpFooter />
 
 

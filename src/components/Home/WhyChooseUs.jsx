@@ -436,7 +436,7 @@ export default function WhyChooseUs() {
       <section className="relative w-full text-white py-16 md:py-24 overflow-hidden">
         {/* Dark Purple and Black Gradient Background */}
         <div
-          className="absolute inset-0 bg-gradient-to-br from-[#111111] via-[#0C0C1F] to-[#111111] z-0"
+          className="absolute inset-0 bg-[#534BFF] z-0"
         />
 
         {/* Subtle Texture Overlay */}
@@ -509,12 +509,12 @@ export default function WhyChooseUs() {
                         </div>
                       </div>
                     </div>
-                    <button ref={el => buttonRefs.current[0] = el} onClick={() => openModal('Van Volume Calculator', <VanVolumeCalculator />)} className="absolute bottom-16 left-1/2 -translate-x-1/2 w-[calc(100%-4rem)] py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0">
+                    {/* <button ref={el => buttonRefs.current[0] = el} onClick={() => openModal('Van Volume Calculator', <VanVolumeCalculator />)} className="absolute bottom-16 left-1/2 -translate-x-1/2 w-[calc(100%-4rem)] py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0">
                       <span className="flex items-center justify-center space-x-2">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 6a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM6 9a1 1 0 000 2h8a1 1 0 100-2H6z" /></svg>
                         <span>Calculate Your Van Space</span>
                       </span>
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>
@@ -562,12 +562,12 @@ export default function WhyChooseUs() {
                         </div>
                       </div>
                     </div>
-                    <button ref={el => buttonRefs.current[1] = el} onClick={() => openModal('Maintenance Cost Estimator', <MaintenanceCostEstimator />)} className="absolute bottom-16 left-1/2 -translate-x-1/2 w-[calc(100%-4rem)] py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0">
+                    {/* <button ref={el => buttonRefs.current[1] = el} onClick={() => openModal('Maintenance Cost Estimator', <MaintenanceCostEstimator />)} className="absolute bottom-16 left-1/2 -translate-x-1/2 w-[calc(100%-4rem)] py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0">
                       <span className="flex items-center justify-center space-x-2">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 9h2a1 1 0 000-2H4a1 1 0 000 2zM3 14h2a1 1 0 000-2H3a1 1 0 000 2zM15 14h2a1 1 0 000-2h-2a1 1 0 000 2zM10 18a1 1 0 001-1v-1a1 1 0 10-2 0v1a1 1 0 001 1z" /></svg>
                         <span>Estimate Your Service Cost</span>
                       </span>
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>
@@ -608,12 +608,12 @@ export default function WhyChooseUs() {
                         </div>
                       </div>
                     </div>
-                    <button ref={el => buttonRefs.current[2] = el} onClick={() => openModal('CNC Cut Time Estimator', <CNCCutTimeEstimator />)} className="mt-4 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
+                    {/* <button ref={el => buttonRefs.current[2] = el} onClick={() => openModal('CNC Cut Time Estimator', <CNCCutTimeEstimator />)} className="mt-4 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
                       <span className="flex items-center justify-center space-x-2">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 102 0V8a1 1 0 00-.445-.832l-.445-.224z" clipRule="evenodd" /></svg>
                         <span>Estimate Cut Time</span>
                       </span>
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>
@@ -634,7 +634,7 @@ export default function WhyChooseUs() {
                 <div className="relative z-10 w-full h-full p-8 pt-10 flex flex-col justify-start">
                   <div className="relative w-full h-48 rounded-md overflow-hidden mb-6 border-2 border-gray-700 mt-4">
                     <div ref={el => glareRefs.current[3] = el} className="absolute inset-0 z-30 opacity-0 glare-effect"></div>
-                    <Image src="/images/qualitymaterial.jpg" alt="Quality Materials" layout="fill" objectFit="cover" ref={el => imageRefs.current[3] = el} data-speed="0.05" />
+                    {/* <Image src="/images/qualitymaterial.jpg" alt="Quality Materials" layout="fill" objectFit="cover" ref={el => imageRefs.current[3] = el} data-speed="0.05" /> */}
                   </div>
                   <div className="card-content-wrapper">
                     <div className="card-text-content" ref={el => contentRefs.current[3] = el}>
@@ -650,12 +650,12 @@ export default function WhyChooseUs() {
                         </div>
                       </div>
                     </div>
-                    <button ref={el => buttonRefs.current[3] = el} onClick={() => openModal('Insulation R-Value Calculator', <InsulationRValueCalculator />)} className="mt-4 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
+                    {/* <button ref={el => buttonRefs.current[3] = el} onClick={() => openModal('Insulation R-Value Calculator', <InsulationRValueCalculator />)} className="mt-4 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
                       <span className="flex items-center justify-center space-x-2">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 102 0V8a1 1 0 00-.445-.832l-.445-.224z" clipRule="evenodd" /></svg>
                         <span>Calculate Insulation R-Value</span>
                       </span>
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>
@@ -676,7 +676,7 @@ export default function WhyChooseUs() {
                 <div className="relative z-10 w-full h-full p-8 pt-10 flex flex-col justify-start">
                   <div className="relative w-full h-48 rounded-md overflow-hidden mb-6 border-2 border-gray-700 mt-4">
                     <div ref={el => glareRefs.current[4] = el} className="absolute inset-0 z-30 opacity-0 glare-effect"></div>
-                    <Image src="/images/offgridready.jpg" alt="offgridready" layout="fill" objectFit="cover" ref={el => imageRefs.current[4] = el} data-speed="0.05" />
+                    {/* <Image src="/images/offgridready.jpg" alt="offgridready" layout="fill" objectFit="cover" ref={el => imageRefs.current[4] = el} data-speed="0.05" /> */}
                   </div>
                   <div className="card-content-wrapper">
                     <div className="card-text-content" ref={el => contentRefs.current[4] = el}>
@@ -692,12 +692,12 @@ export default function WhyChooseUs() {
                         </div>
                       </div>
                     </div>
-                    <button ref={el => buttonRefs.current[4] = el} onClick={() => openModal('Solar Power Calculator', <SolarPowerCalculator />)} className="mt-4 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
+                    {/* <button ref={el => buttonRefs.current[4] = el} onClick={() => openModal('Solar Power Calculator', <SolarPowerCalculator />)} className="mt-4 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
                       <span className="flex items-center justify-center space-x-2">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M11 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 11a1 1 0 000-2h1a1 1 0 000 2H4zM16 11a1 1 0 000-2h1a1 1 0 000 2h-1zM10 18a1 1 0 001-1v-1a1 1 0 10-2 0v1a1 1 0 001 1z" clipRule="evenodd" /></svg>
                         <span>Calculate Solar Needs</span>
                       </span>
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>
@@ -714,12 +714,12 @@ export default function WhyChooseUs() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">True Custom Builds</h3>
                 <p className="text-gray-300">No cookie-cutter builds here; Big Bear Vans is a truly custom campervan conversion shop. 3D scanners and two CNC machines that create any configuration and style you want in your campervan. From eco-friendly campervans and mobile office vans and luxury sprinter vans, we have successfully crafted more than 180 customized campervans with 5-star ratings.</p>
-                <button onClick={() => openModal('Van Volume Calculator', <VanVolumeCalculator />)} className="mt-6 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
+                {/* <button onClick={() => openModal('Van Volume Calculator', <VanVolumeCalculator />)} className="mt-6 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
                   <span className="flex items-center justify-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 6a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM6 9a1 1 0 000 2h8a1 1 0 100-2H6z" /></svg>
                     <span>Calculate Your Van Space</span>
                   </span>
-                </button>
+                </button> */}
               </div>
 
               {/* Card 2: Post Build Support */}
@@ -736,12 +736,12 @@ export default function WhyChooseUs() {
                   <li>Remote assistance on warranty issues.</li>
                   <li>24/7 Remote assistance for urgent issues</li>
                 </ul>
-                <button onClick={() => openModal('Maintenance Cost Estimator', <MaintenanceCostEstimator />)} className="mt-6 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
+                {/* <button onClick={() => openModal('Maintenance Cost Estimator', <MaintenanceCostEstimator />)} className="mt-6 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
                   <span className="flex items-center justify-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 9h2a1 1 0 000-2H4a1 1 0 000 2zM3 14h2a1 1 0 000-2H3a1 1 0 000 2zM15 14h2a1 1 0 000-2h-2a1 1 0 000 2zM10 18a1 1 0 001-1v-1a1 1 0 10-2 0v1a1 1 0 001 1z" /></svg>
                     <span>Estimate Your Service Cost</span>
                   </span>
-                </button>
+                </button> */}
               </div>
 
               {/* Card 3: CNC Technology */}
@@ -751,42 +751,42 @@ export default function WhyChooseUs() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">CNC Technology</h3>
                 <p className="text-gray-300">At Big Bear Vans, we use state-of-the-art CNC (Computer Numerical Control) technology to take your van customization to the next level. Every van component is designed by our CAD/CAM team of machines, and scanned by 3D scanners to ensure precise cuts and the best quality.</p>
-                <button onClick={() => openModal('CNC Cut Time Estimator', <CNCCutTimeEstimator />)} className="mt-6 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
+                {/* <button onClick={() => openModal('CNC Cut Time Estimator', <CNCCutTimeEstimator />)} className="mt-6 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
                   <span className="flex items-center justify-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 102 0V8a1 1 0 00-.445-.832l-.445-.224z" clipRule="evenodd" /></svg>
                     <span>Estimate Cut Time</span>
                   </span>
-                </button>
+                </button> */}
               </div>
 
               {/* Card 4: Quality Materials */}
               <div className="relative bg-[#1A1A1A] rounded-lg shadow-xl p-6">
                 <div className="relative w-full h-48 rounded-md overflow-hidden mb-6 border-2 border-gray-700">
-                  <Image src="/images/qualitymaterial.jpg" alt="Quality Materials" layout="fill" objectFit="cover" />
+                  {/* <Image src="/images/qualitymaterial.jpg" alt="Quality Materials" layout="fill" objectFit="cover" /> */}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Quality Materials</h3>
                 <p className="text-gray-300">Big Bear Vans is known for using top-notch materials in camper vans. From CNC-cut cabinets and eco-friendly insulation to durable flooring and a spacious bathroom, we use only the best and the highest-quality materials to ensure your van stands the test of time.</p>
-                <button onClick={() => openModal('Insulation R-Value Calculator', <InsulationRValueCalculator />)} className="mt-6 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
+                {/* <button onClick={() => openModal('Insulation R-Value Calculator', <InsulationRValueCalculator />)} className="mt-6 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
                   <span className="flex items-center justify-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 102 0V8a1 1 0 00-.445-.832l-.445-.224z" clipRule="evenodd" /></svg>
                     <span>Calculate Insulation R-Value</span>
                   </span>
-                </button>
+                </button> */}
               </div>
 
               {/* Card 5: Off-grid Ready */}
               <div className="relative bg-[#1A1A1A] rounded-lg shadow-xl p-6">
                 <div className="relative w-full h-48 rounded-md overflow-hidden mb-6 border-2 border-gray-700">
-                  <Image src="/images/offgridready.jpg" alt="offgridready" layout="fill" objectFit="cover" />
+                  {/* <Image src="/images/offgridready.jpg" alt="offgridready" layout="fill" objectFit="cover" /> */}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Off-grid Ready</h3>
                 <p className="text-gray-300">Our customized campervans come equipped with all the necessary off-road accessories, like campervan solar panels, lithium battery banks, etc. They are designed to handle all the off-grid escapes, bumpy rides, and cross-country trips.</p>
-                <button onClick={() => openModal('Solar Power Calculator', <SolarPowerCalculator />)} className="mt-6 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
+                {/* <button onClick={() => openModal('Solar Power Calculator', <SolarPowerCalculator />)} className="mt-6 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
                   <span className="flex items-center justify-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M11 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 11a1 1 0 000-2h1a1 1 0 000 2H4zM16 11a1 1 0 000-2h1a1 1 0 000 2h-1zM10 18a1 1 0 001-1v-1a1 1 0 10-2 0v1a1 1 0 001 1z" clipRule="evenodd" /></svg>
                     <span>Calculate Solar Needs</span>
                   </span>
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
