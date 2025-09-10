@@ -539,7 +539,7 @@ export default function WhyChooseUs() {
                 <div className="relative z-10 w-full h-full p-8 flex flex-col justify-start">
                   <div className="relative w-full h-48 rounded-md overflow-hidden mb-6 border-2 border-gray-700">
                     <div ref={el => glareRefs.current[1] = el} className="absolute inset-0 z-30 opacity-0 glare-effect"></div>
-                    <Image src="/images/customizabledesigns.webp" alt="Post Build Support" layout="fill" objectFit="cover" ref={el => imageRefs.current[1] = el} data-speed="0.05" />
+                    <Image src="/WhyChooseBBV/post.jpg" alt="Post Build Support" layout="fill" objectFit="cover" ref={el => imageRefs.current[1] = el} data-speed="0.05" />
                   </div>
                   <div className="card-content-wrapper">
                     <div className="card-text-content" ref={el => contentRefs.current[1] = el}>
@@ -592,7 +592,7 @@ export default function WhyChooseUs() {
                 <div className="relative z-10 w-full h-full p-8 pt-10 flex flex-col justify-start">
                   <div className="relative w-full h-48 rounded-md overflow-hidden mb-6 border-2 border-gray-700 mt-4">
                     <div ref={el => glareRefs.current[2] = el} className="absolute inset-0 z-30 opacity-0 glare-effect"></div>
-                    <Image src="/images/CNCtechnology.jpg" alt="CNC Technology" layout="fill" objectFit="cover" ref={el => imageRefs.current[2] = el} data-speed="0.05" />
+                    <Image src="/WhyChooseBBV/CNC.jpg" alt="CNC Technology" layout="fill" objectFit="cover" ref={el => imageRefs.current[2] = el} data-speed="0.05" />
                   </div>
                   <div className="card-content-wrapper">
                     <div className="card-text-content" ref={el => contentRefs.current[2] = el}>
@@ -634,7 +634,7 @@ export default function WhyChooseUs() {
                 <div className="relative z-10 w-full h-full p-8 pt-10 flex flex-col justify-start">
                   <div className="relative w-full h-48 rounded-md overflow-hidden mb-6 border-2 border-gray-700 mt-4">
                     <div ref={el => glareRefs.current[3] = el} className="absolute inset-0 z-30 opacity-0 glare-effect"></div>
-                    {/* <Image src="/images/qualitymaterial.jpg" alt="Quality Materials" layout="fill" objectFit="cover" ref={el => imageRefs.current[3] = el} data-speed="0.05" /> */}
+                    <Image src="/WhyChooseBBV/quality1.jpg" alt="Quality Materials" layout="fill" objectFit="cover" ref={el => imageRefs.current[3] = el} data-speed="0.05" />
                   </div>
                   <div className="card-content-wrapper">
                     <div className="card-text-content" ref={el => contentRefs.current[3] = el}>
@@ -676,7 +676,7 @@ export default function WhyChooseUs() {
                 <div className="relative z-10 w-full h-full p-8 pt-10 flex flex-col justify-start">
                   <div className="relative w-full h-48 rounded-md overflow-hidden mb-6 border-2 border-gray-700 mt-4">
                     <div ref={el => glareRefs.current[4] = el} className="absolute inset-0 z-30 opacity-0 glare-effect"></div>
-                    {/* <Image src="/images/offgridready.jpg" alt="offgridready" layout="fill" objectFit="cover" ref={el => imageRefs.current[4] = el} data-speed="0.05" /> */}
+                    <Image src="/WhyChooseBBV/off-grid.jpg" alt="offgridready" layout="fill" objectFit="cover" ref={el => imageRefs.current[4] = el} data-speed="0.05" />
                   </div>
                   <div className="card-content-wrapper">
                     <div className="card-text-content" ref={el => contentRefs.current[4] = el}>
@@ -725,7 +725,7 @@ export default function WhyChooseUs() {
               {/* Card 2: Post Build Support */}
               <div className="relative bg-[#1A1A1A] rounded-lg shadow-xl p-6">
                 <div className="relative w-full h-48 rounded-md overflow-hidden mb-6 border-2 border-gray-700">
-                  <Image src="/images/customizabledesigns.webp" alt="Post Build Support" layout="fill" objectFit="cover" />
+                  <Image src="/WhyChhoseBBV/post.jpg" alt="Post Build Support" layout="fill" objectFit="cover" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Post Build Support</h3>
                 <p className="text-gray-300">From that call to get key handover, we guide and support you at every step. Unlike other van makers, Big Bear Vans provides after-build support to its customers. We offer:</p>
@@ -793,7 +793,7 @@ export default function WhyChooseUs() {
 
           {/* Call to Action Button */}
           <div className="text-center mt-16">
-            <Link href={"/contact"} className="relative inline-flex items-center justify-center px-10 py-4 rounded-full font-semibold overflow-hidden group shadow-lg animated-button-gradient">
+            <Link href={"/inquery"} className="relative inline-flex items-center justify-center px-10 py-4 rounded-full font-semibold overflow-hidden group shadow-lg animated-button-gradient">
               <span className="relative text-white z-10">Start Your Custom Build</span>
             </Link>
           </div>

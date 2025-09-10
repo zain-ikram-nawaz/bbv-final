@@ -8,23 +8,23 @@ export default function UpFooter() {
   const dropdowns = [
     {
       heading: "What Van Models Do You Customize at Big Bear Vans?",
-      text: "Our web development services include responsive design, e-commerce solutions, and custom web applications. We use the latest technologies to create fast, secure, and scalable websites that drive business growth."
+      text: "At Big Bear Vans, we mainly customize Mercedes-Benz Sprinter, RAM ProMaster, and Ford Transit vans."
     },
     {
-      heading: "What Van Models Do You Customize at Big Bear Vans?",
-      text: "We create intuitive and engaging user experiences that convert visitors into customers. Our design process includes user research, wireframing, prototyping, and usability testing to ensure the best possible results."
+      heading: "How Long Does It Take to Build a Custom Campervan?",
+      text: "It depends on various factors like your requirements, our availability, etc. Since we do all the things manually, it takes us about 4 to 5 months to design and build a fully customizable campervan."
     },
     {
-      heading: "What Van Models Do You Customize at Big Bear Vans?",
-      text: "Our digital marketing strategies help businesses increase online visibility, generate leads, and boost sales. Services include SEO, PPC, social media marketing, email campaigns, and content marketing."
+      heading: " What Guarantee Do You Offer?",
+      text: "All our van conversions come with a 1-year warranty against workmanship defects, starting from the pickup date. Moreover, we also offer a 3-year extended warranty on our craftsmanship. Please note that while Big Bear Vans warrants its services, this warranty does not cover third-party products themselves."
     },
     {
-      heading: "What Van Models Do You Customize at Big Bear Vans?",
-      text: "We develop native and cross-platform mobile applications for iOS and Android. Our apps are user-friendly, performant, and designed to provide exceptional user experiences across all devices."
+      heading: "Do You Offer 4x4 or AWD Camper Vans?",
+      text: "We offer both 4x4 and AWD camper vans. You can choose from our 4x4 custom Sprinter vans for off-grid capability or opt for an AWD van for better stability and performance."
     },
     {
-      heading: "What Van Models Do You Customize at Big Bear Vans?",
-      text: "Our consulting services help businesses leverage technology to achieve their goals. We provide strategic guidance, technology audits, and implementation plans tailored to your specific needs."
+      heading: "Do I need to own a van, or can you source one for my conversion?",
+      text: "We can convert a campervan you already have, or we can also source a fully customized Class B RV for you. We have contacts with dealers and can get you a van with up to an $8000 discount on the MSRP tag."
     },
   ];
 
@@ -69,11 +69,11 @@ export default function UpFooter() {
               >
                 <div className="px-6 py-4 text-purple-100 bg-gray-900/50 rounded-b-xl mt-1 border border-white/5">
                   <p>{item.text}</p>
-                  {openIndex === index && (
+                  {/* {openIndex === index && (
                     <button className="mt-4 px-4 py-2 bg-purple-700 hover:bg-purple-600 text-white rounded-lg transition-colors duration-300 text-sm">
                       Learn More
                     </button>
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>

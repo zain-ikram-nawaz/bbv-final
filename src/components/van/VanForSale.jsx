@@ -52,7 +52,7 @@ export default function VanForSale({ data }) {
 
       return (
         <ShapeCard
-  shape="customRect"
+  shape="customRectMirror"
   key={van.slug}
   className="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 cursor-pointer w-full max-w-sm"
   onMouseEnter={() => setHoveredCard(idx)}
@@ -137,17 +137,17 @@ export default function VanForSale({ data }) {
 
         return (
           <ShapeCard
-          shape='shopTopCard'
+            shape="shopTopCard"
             key={van.slug}
-            className="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 cursor-pointer w-full max-w-sm"
+            className="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 w-full max-w-sm cursor-not-allowed"
+            // ❌ onClick hata diya (disable)
             onMouseEnter={() => setHoveredCard(idx)}
             onMouseLeave={() => setHoveredCard(null)}
-            onClick={() => router.push(`/van-for-sale/${van.slug}`)}
           >
             {/* Image Container with fixed height and object-cover */}
             <div className="relative w-full h-72 sm:h-80 overflow-hidden rounded-t-2xl">
               <img
-                src={van.gallery?.[0] || '/images/default.jpg'}
+                src={van.gallery?.[0] || "/images/default.jpg"}
                 alt={vehicle?.title}
                 className="w-full h-full object-cover object-center transition-transform duration-700"
               />
@@ -161,9 +161,13 @@ export default function VanForSale({ data }) {
 
             {/* Content */}
             <div className="p-4">
-              <h2 className="text-lg font-bold text-blue-900 mb-1">{vehicle?.title}</h2>
+              <h2 className="text-lg font-bold text-blue-900 mb-1">
+                {vehicle?.title}
+              </h2>
               {vehicle?.description && (
-                <p className="text-gray-600 mb-3 line-clamp-2">{vehicle.description}</p>
+                <p className="text-gray-600 mb-3 line-clamp-2">
+                  {vehicle.description}
+                </p>
               )}
             </div>
           </ShapeCard>

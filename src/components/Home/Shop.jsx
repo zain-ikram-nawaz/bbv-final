@@ -2,13 +2,13 @@
 import React from "react"
 import ShapeCard from "../SvgShape/ShapeCard" // 👈 apna reusable ShapeCard import karo
 
-export default function Shop({ van }) {
+export default function Shop() {
 
  const dummyVans = [
     {
       slug:"Camper Van Deluxe",
       _id: "1",
-       gallery: ["/images/1.png"],
+       gallery: ["/shop/1.jpg"],
       van_listing: {
         title: "Camper Van Deluxe",
         description: "A stylish and comfortable van for your next road trip adventure."
@@ -19,7 +19,7 @@ export default function Shop({ van }) {
     {
       slug: "Adventure Van Pro",
       _id: "2",
-       gallery: ["/images/2.png"],
+       gallery: ["/shop/2.jpg"],
       van_listing: {
         title: "Adventure Van Pro",
         description: "Fully equipped adventure van with modern interiors and durability."
@@ -30,7 +30,7 @@ export default function Shop({ van }) {
     {
       slug : "Classic Retro Van",
       _id: "3",
-   gallery: ["/images/3.png"],
+   gallery: ["/shop/3.jpg"],
       van_listing: {
         title: "Classic Retro Van",
         description: "Vintage styled van with modern comfort and great performance."
@@ -41,7 +41,7 @@ export default function Shop({ van }) {
       {
         slug: "Classic Retro Van",
       _id: "4",
-    gallery: ["/images/4.png"],
+    gallery: ["/shop/4.jpg"],
       van_listing: {
         title: "Classic Retro Van",
         description: "Vintage styled van with modern comfort and great performance."
@@ -50,7 +50,7 @@ export default function Shop({ van }) {
       formatted_price: "$14,999"
     }
   ];
-  const data = van && van.length > 0 ? van : dummyVans;
+
 
 
   return (
@@ -69,7 +69,7 @@ export default function Shop({ van }) {
       {/* Cards Grid */}
       <div className="w-full max-w-3xl px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-x-6 md:gap-x-8 place-items-center ">
-{data?.slice(0, 4).map((item, i) => (
+{dummyVans?.slice(0, 4).map((item, i) => (
   <ShapeCard
     key={i}
     shape={i % 4 < 2 ? "shopBottomCard" : "shopTopCard"} // 0,1 -> Top | 2,3 -> Bottom

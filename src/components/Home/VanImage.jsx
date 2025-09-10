@@ -180,67 +180,82 @@ const data = van && van.length > 0 ? van : dummyVans;
         </p>
 </div>
       {/* Main Content Area - Centering the image */}
-      <div className="relative z-10 w-full h-full flex flex-wrap items-center justify-center py-10 md:py-10 px-4">
-{[...data] // copy banayi taki original data mutate na ho
-  .sort((a, b) => (b.sold === false) - (a.sold === true)) // ✅ sold=true waale pehle
-  .slice(0, 3) // sirf 3 items
-  .map((item, i) => (
-    <ShapeCard
-      key={item._id}
-      shape={i % 2 === 0 ? "customRect" : "customRect"}
-      color="#181818"
-      className="w-full sm:w-[300px] md:w-[260px] shadow-lg group"
-    >
-      {/* Image Section */}
-      <div className="w-full h-full relative overflow-hidden">
-        <img
-          src={item.gallery[0] || "/images/van-sample.jpg"}
-          alt={item.van_listing?.title}
-          className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
-        />
-
-        {/* Sold / For Sale Tag */}
-        <span
-          className={`absolute top-3 left-0 px-2 py-1 text-xs font-bold rounded z-20 ${
-            item.sold ? "bg-red-500 text-white" : "bg-green-600 text-white"
-          }`}
+ <div className="relative z-10 w-full h-full flex flex-col items-center py-10 md:py-10 px-4">
+  {/* Grid for Cards */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center w-full max-w-5xl">
+    {[...data]
+      .sort((a, b) => (b.sold === false) - (a.sold === true)) // ✅ sold=true waale pehle
+      .slice(0, 3) // sirf 3 items
+      .map((item, i) => (
+        <ShapeCard
+          key={item._id}
+          shape="customRectMirror"
+          color="#181818"
+          className="w-full sm:w-[300px] md:w-[260px] shadow-lg group"
         >
-          {item.sold ? "SOLD" : "FOR SALE"}
-        </span>
-      </div>
+          {/* Image Section */}
+          <div className="w-full h-full relative overflow-hidden">
+            <img
+              src={item.gallery[0] || "/images/van-sample.jpg"}
+              alt={item.van_listing?.title}
+              className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
+            />
 
-      {/* Content Section */}
-      <div className="p-4 flex flex-col justify-between h-[calc(100%-160px)] bg-black bg-opacity-80">
-        <div>
-          <h3 className="text-lg font-bold text-white">
-            {item.van_listing?.title}
-          </h3>
-          <p className="text-sm text-gray-400 line-clamp-3">
-            {item.van_listing?.description}
-          </p>
-        </div>
+            {/* Sold / For Sale Tag */}
+            <span
+              className={`absolute top-3 left-0 px-2 py-1 text-xs font-bold rounded z-20 ${
+                item.sold ? "bg-red-500 text-white" : "bg-green-600 text-white"
+              }`}
+            >
+              {item.sold ? "SOLD" : "FOR SALE"}
+            </span>
+          </div>
 
-        {/* Price + Button */}
-        <div className="flex items-center justify-between mt-2">
-          <span className="text-lg font-semibold text-blue-600">
-            {item.formatted_price}
-          </span>
-          <Link href={`/van-for-sale/${item.slug}`}>
-          <button className="bg-black text-white px-3 py-1 rounded-md transition text-sm">
-            See More
-          </button>
-          </Link>
-        </div>
-      </div>
-    </ShapeCard>
-))}
-<Link href="/van-for-sale" className="w-full flex justify-center mt-10">
- <button className="bg-black  text-white px-4 py-2 rounded-md transition text-sm">
-          Explore Vans
-          </button>
-</Link>
+          {/* Content Section */}
+          <div className="w-full flex flex-col justify-between h-[calc(100%-160px)] bg-black bg-opacity-80">
+            <div>
+              <h3 className="text-lg font-bold text-white p-1">
+                {item.van_listing?.title}
+              </h3>
+              <p className="text-sm text-gray-400 line-clamp-3 p-1">
+                {item.van_listing?.description}
+              </p>
+            </div>
 
+            {/* Price + Button */}
+            <div className="flex items-center justify-between p-2">
+              <span className="text-lg font-semibold">
+                {item.formatted_price}
+              </span>
+
+              {item.sold ? (
+                <button
+                  disabled
+                  className="bg-gray-500 text-white px-3 py-1 rounded-md text-lg cursor-not-allowed opacity-70"
+                >
+                  Sold Out
+                </button>
+              ) : (
+                <Link href={`/van-for-sale/${item.slug}`}>
+                  <button className="bg-black text-white px-3 py-1 rounded-md transition text-lg">
+                    See More
+                  </button>
+                </Link>
+              )}
+            </div>
+          </div>
+        </ShapeCard>
+      ))}
+  </div>
+
+  {/* Explore Button */}
+  <Link href="/van-for-sale" className="mt-10">
+    <button className="bg-black text-white px-4 py-2 rounded-md transition text-sm">
+      Explore Vans
+    </button>
+  </Link>
 </div>
+
 
 
 

@@ -30,27 +30,29 @@ export default async function Home() {
       <Hero />
       <CurvedSeparator />
       <VanImage van={van} />
-        <InvertedCurvedSeparator />
+      <InvertedCurvedSeparator />
       <CustomizeScreen />
-    <CurvedSeparator4 bg="#534BFF"/>
+      <CurvedSeparator4 bg="#534BFF" />
 
-        <Vector48 bg='white' color="#000000"/>
+      <Vector48 bg='#EEEEEE' color="#000000" />
       <Shop van={van} />
+      <CurvedSeparator4 bg="#00000" />
       <DreamDriveway />
       {/* <CurvedSeparator3 /> */}
       <InvertedCurvedSeparator />
       <WhyChooseUs />
-      <InvertedCurvedSeparator3 />
+      <CurvedSeparator4 bg="#534BFF" />
       {/* <InvertedCurvedSeparator /> */}
       {/* <KeyFeatures /> */}
       {/* <CurvedSeparator2 /> */}
+      <Vector48 bg='#EEEEEE' color="#1B2B41" />
       <CustomerReviews />
-      <CurvedSeparator4 />
+      <CurvedSeparator4 bg="#1B2B41" />
       <Blog />
       <InvertedCurvedSeparator4 />
       <BookingPage />
-    <CurvedSeparator4 bg="#534BFF"/>
-        <Vector48 bg='#f0eded' color="#000000"/>
+      <CurvedSeparator4 bg="#534BFF" />
+      <Vector48 bg='#EEEEEE' color="#000000" />
 
       <UpFooter />
 

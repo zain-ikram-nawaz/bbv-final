@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState, useEffect, useRef, useId } from "react";
 
 // NOTE: It is assumed that GSAP and ScrollTrigger are loaded via a <script> tag
@@ -226,9 +227,11 @@ const CustomizeSection = () => {
               <p className="text-gray-300 text-base md:text-lg mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0 text-content-animate">
                 At Big Bear Vans, we don’t do one-size-fits-all custom van conversions. Therefore, you’ll not find any generic templates here. We build every campervan according to your lifestyle, habits, and travel plans. We will finalize van design and handpick amenities like an off-grid electrical system and a customized kitchen to create your perfect home on wheels.
               </p>
+            <Link href={"/inquery"}>
               <button className="customize-btn px-8 py-3 rounded-full font-semibold lg:ml-1">
                 Start Your Custom Build
               </button>
+            </Link>
             </div>
             <div className="lg:w-1/2 w-full mt-10 lg:mt-0">
               <div className="grid grid-cols-2 gap-x-3 items-start">

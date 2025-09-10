@@ -1,11 +1,10 @@
-"use client"
 import React from 'react'
-import ContactUs from '@/components/contact/contact'
+import Inquery from "../../components/inquery/page"
 
 export default function page() {
   return (
     <div>
-<ContactUs/>
+<Inquery/>
     </div>
   )
 }

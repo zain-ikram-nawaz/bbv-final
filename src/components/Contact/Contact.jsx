@@ -1,658 +1,321 @@
-"use client";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, X, ChevronLeft, ChevronRight, Check } from "lucide-react";
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, CheckCircle, XCircle } from 'lucide-react';
+import { createRoot } from 'react-dom/client';
 
-// --- Form Data and Components (no changes needed here) ---
+const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
 
-const formQuestions = [
-  // Step 1: Travel Info
-  {
-    step: 1,
-    title: "Travel Info",
-    questions: [
-      {
-        id: "plans",
-        question: "What are your plans for the van?",
-        options: [
-          "Full time van living",
-          "Weekend and short trips",
-          "Use for business",
-          "No clue yet",
-        ],
-      },
-      {
-        id: "people",
-        question: "How many people will typically travel in your van?",
-        options: [
-          "1-2 people",
-          "3-4 people",
-          "5-6",
-          "more than 6",
-        ],
-      },
-    ],
-  },
-  // Step 2: Van Preferences
-  {
-    step: 2,
-    title: "Van Preferences",
-    questions: [
-      {
-        id: "van",
-        question: "Do you prefer a short or a long van?",
-        options: [
-          "short (Sprinter 144 or Transit 148 or ProMaster 136)",
-          "long (Sprinter 170 or Transit 148ext or ProMaster 159)",
-          "super long (Sprinter 170ext)",
-          "I am not sure yet",
-        ],
-      },
-      {
-        id: "ac",
-        question: "Do you need an A/C unit?",
-        options: [
-          "Yes, a 12v one being able to work off the grid",
-          "Yes, a 110v one and I will use it while connected to shore power only",
-          "No, I don’t need A/C",
-          "I’d rather have 2 roof fans",
-        ],
-      },
-      {
-        id: "shower",
-        question: "What best describes your shower needs?",
-        options: [
-          "Indoor full standing proper bathroom",
-          "Indoor pop up or folding hidden shower",
-          "Outdoor rear shower is fine",
-          "I don’t need one",
-        ],
-      },
-    ],
-  },
-  // Step 3: Comfort Options
-  {
-    step: 3,
-    title: "Comfort & Utilities",
-    questions: [
-      {
-        id: "electrical",
-        question: "What best describes your electrical needs?",
-        options: [
-          "I just need to charge my electronics and run the fridge",
-          "I want to use A/C, induction, microwave, hairdryer, etc.",
-          "I want to live off the grid for as long as possible",
-        ],
-      },
-      {
-        id: "heating",
-        question: "What heating system do you plan on?",
-        options: [
-          "advanced glycol combined water and air heater",
-          "diesel air heater under the passenger seat and 110v water heater",
-          "diesel air heater under the passenger seat and 12v water heater",
-          "not that important right now",
-        ],
-      },
-    ],
-  },
-  // Step 4: Final Details
-  {
-    step: 4,
-    title: "Final Details",
-    questions: [
-      {
-        id: "sleep",
-        question: "What are your sleeping arrangements?",
-        options: [
-          "Stationary bed with garage storage area underneath",
-          "Electric bed that goes up and down with dinette below",
-          "Seating benches and a table that transform to bed",
-          "Murphy fold away bed",
-        ],
-      },
-      {
-        id: "havevan",
-        question: "Do you have a van?",
-        options: [
-          "Yes, I have a van already",
-          "No, I need your help to source one",
-          "I want to purchase a ready to go camper van",
-          "I am currently in the initial stages of gathering information",
-        ],
-      },
-      {
-        id: "spend",
-        question: "Separate from the purchase of the van, how much do you want to spend on the build-out?",
-        options: [
-          "$79K - $99K",
-          "$100K - $119K",
-          "$120K+",
-        ],
-      },
-      {
-        id: "payment",
-        question: "How are you paying for the van and conversion?",
-        options: [
-          "Finance just the Van and pay cash for conversion",
-          "Pay cash for both Van and conversion",
-          "I am still figuring that out",
-        ],
-      },
-    ],
-  },
-  // Summary Page
-  {
-    step: 5,
-    title: "Summary",
-    questions: [],
-  },
-  // Contact info is the final step
-  {
-    step: 6,
-    title: "Contact Info",
-    questions: [
-      {
-        id: "phoneNumber",
-        question: "Please leave your phone number below, and we will text you all the info (OPTIONAL)",
-        type: "text",
-        placeholder: "Phone Number",
-      },
-      {
-        id: "emailAddress",
-        question: "OR leave your e-mail address below, and we will send you all the info",
-        type: "email",
-        placeholder: "Email Address",
-      },
-    ],
-  },
-];
+  const [formStatus, setFormStatus] = useState(null); // 'success' or 'error'
+  const daysOfWeek = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
-const buttonVariants = {
-  initial: {
-    scale: 1,
-    borderColor: '#444',
-    color: '#a0a0a0',
-  },
-  hover: {
-    scale: 1.05,
-    borderColor: '#fff',
-    color: '#fff',
-    boxShadow: '0 4px 15px rgba(255, 255, 255, 0.1)',
-  },
-  tap: {
-    scale: 0.95,
-  },
-  disabled: {
-    opacity: 0.3,
-    scale: 1,
-    borderColor: '#444',
-    color: '#a0a0a0',
-  },
-};
-
-const QuestionGroup = ({ question, selected, onSelect }) => (
-  <div className="form-group mb-8">
-    <h3 className="text-xl font-bold mb-4">{question.question}</h3>
-    <motion.div
-      className="grid grid-cols-1 md:grid-cols-2 gap-4"
-      initial="hidden"
-      animate="visible"
-      variants={{
-        visible: {
-          transition: {
-            staggerChildren: 0.1
-          }
-        }
-      }}
-    >
-      {question.options.map((option, index) => (
-        <motion.label
-          key={index}
-          htmlFor={`${question.id}-${index}`}
-          className="relative block"
-          variants={{
-            hidden: { opacity: 0, y: 20, scale: 0.95 },
-            visible: { opacity: 1, y: 0, scale: 1 }
-          }}
-          transition={{ duration: 0.3 }}
-          whileHover={{ scale: 1.05 }}
-        >
-          {/* This line is the fix: It ensures `selected` is an array. */}
-          <input
-            type="checkbox"
-            id={`${question.id}-${index}`}
-            name={question.id}
-            value={option}
-            checked={(selected || []).includes(option)}
-            onChange={() => onSelect(question.id, option)}
-            className="hidden"
-          />
-          <motion.span
-            className={`flex items-center h-full p-4 rounded-lg cursor-pointer transition-all duration-300 border justify-between
-                      ${(selected || []).includes(option) ? 'text-white border-[#0f95be] shadow-lg' : 'bg-[#1f1f1f] text-gray-300 border-[#444] hover:border-white'}`}
-            style={(selected || []).includes(option) ? {
-              backgroundImage: 'linear-gradient(to right, #0f95be, #534bff, #140aff, #0f95be)',
-              backgroundSize: '200% auto',
-            } : {}}
-            animate={(selected || []).includes(option) ? { backgroundPositionX: ['0%', '-100%'] } : {}}
-            transition={{
-              duration: 8,
-              ease: "linear",
-              repeat: Infinity,
-              repeatType: "loop",
-            }}
-          >
-            {option}
-            {(selected || []).includes(option) && (
-              <Check className="ml-2 text-white h-5 w-5" />
-            )}
-          </motion.span>
-        </motion.label>
-      ))}
-    </motion.div>
-  </div>
-);
-
-const ContactField = ({ question, value, onSelect }) => (
-  <div className="form-group mb-8 flex justify-center">
-    <div className="w-full md:w-3/4">
-      <h3 className="text-xl font-bold mb-4">{question.question}</h3>
-      <input
-        type={question.type}
-        name={question.id}
-        value={value}
-        onChange={(e) => onSelect(question.id, e.target.value)}
-        className="w-full bg-[#1f1f1f] text-gray-300 border border-[#444] rounded-lg p-4 transition-all duration-300 focus:outline-none focus:border-[#0f95be] focus:scale-105"
-        placeholder={question.placeholder}
-      />
-    </div>
-  </div>
-);
-
-const Summary = ({ formData }) => (
-  <motion.div
-    initial={{ opacity: 0, x: 20 }}
-    animate={{ opacity: 1, x: 0 }}
-    exit={{ opacity: 0, x: -20 }}
-    transition={{ duration: 0.3 }}
-    className="space-y-6"
-  >
-    <h3 className="text-2xl font-bold mb-4">Review Your Choices</h3>
-    {Object.keys(formData).map(key => {
-      const questionData = formQuestions.flatMap(step => step.questions).find(q => q.id === key);
-      const value = formData[key];
-
-      if (!value || (Array.isArray(value) && value.length === 0)) {
-        return null; // Skip empty fields
-      }
-
-      return (
-        <div key={key} className="bg-[#1f1f1f] p-4 rounded-lg border border-[#444]">
-          <p className="text-gray-400 text-sm">{questionData?.question || key}</p>
-          <p className="text-lg text-white mt-1">
-            {Array.isArray(value) ? value.join(", ") : value}
-          </p>
-        </div>
-      );
-    })}
-  </motion.div>
-);
-
-const SubmitButton = ({ isLoading }) => (
-  <motion.button
-    type="submit"
-    className="px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-2 w-full md:w-auto"
-    style={{
-      backgroundImage: 'linear-gradient(90deg, #534bff, #0f95be, #140aff, #534bff)',
-      backgroundSize: '200% auto',
-      color: 'white',
-      boxShadow: '0 4px 15px rgba(83, 75, 255, 0.4)',
-    }}
-    animate={{ backgroundPositionX: ['0%', '-200%'] }}
-    transition={{
-      duration: 8,
-      ease: "linear",
-      repeat: Infinity,
-      repeatType: "loop",
-    }}
-    whileHover={{ scale: 1.05, boxShadow: '0 6px 20px rgba(83, 75, 255, 0.6)' }}
-    whileTap={{ scale: 0.95 }}
-    disabled={isLoading}
-  >
-    {isLoading ? "Submitting..." : "Submit"}
-    <ArrowUpRight size={20} />
-  </motion.button>
-);
-
-export default function ContactForm() {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [formData, setFormData] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
-  const [message, setMessage] = useState(null);
-  const [validationMessage, setValidationMessage] = useState(null);
-
-  const handleSelect = (questionId, optionValue) => {
-    setFormData(prev => {
-      // Use an empty array as a fallback for the current selection
-      const currentSelection = prev[questionId] || []; 
-      const question = formQuestions.flatMap(step => step.questions).find(q => q.id === questionId);
-
-      if (question.type === 'text' || question.type === 'email') {
-        // Handle text/email input
-        return {
-          ...prev,
-          [questionId]: optionValue
-        };
-      } else {
-        // Handle checkbox/option selection
-        if (currentSelection.includes(optionValue)) {
-          return {
-            ...prev,
-            [questionId]: currentSelection.filter(option => option !== optionValue)
-          };
-        } else {
-          return {
-            ...prev,
-            [questionId]: [...currentSelection, optionValue]
-          };
-        }
-      }
-    });
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
-  const handleNext = () => {
-    if (isFormComplete()) {
-      setValidationMessage(null);
-      if (currentStep < formQuestions.length - 1) {
-        setCurrentStep(prev => prev + 1);
-      }
-    } else {
-      setValidationMessage("Please complete all fields to proceed.");
-    }
-  };
-
-  const handlePrevious = () => {
-    if (currentStep > 0) {
-      setCurrentStep(prev => prev - 1);
-      setValidationMessage(null); // Clear validation message on back
-    }
-  };
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (!isFormComplete()) {
-      setValidationMessage("Please complete all fields to submit.");
-      return;
-    }
-    
-    setIsLoading(true);
-    setMessage(null);
+    setFormStatus(null);
+    console.log('Form submitted:', formData);
 
-    // Placeholder for actual API call
-    console.log("Form data submitted:", formData);
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setMessage({ type: 'success', text: '✅ Form submitted successfully!' });
-      setFormData({});
-      setCurrentStep(0);
-    } catch (error) {
-      setMessage({ type: 'error', text: '❌ An error occurred. Please try again.' });
-    } finally {
-      setIsLoading(false);
-      setTimeout(() => setMessage(null), 5000);
-    }
-  };
-
-  const isLastStep = currentStep === formQuestions.length - 1;
-  const isSummaryStep = currentStep === formQuestions.length - 2;
-  const allSteps = formQuestions.map(q => q.title);
-  
-  const isFormComplete = () => {
-    if (isSummaryStep) {
-      return true; // Summary step is always complete for navigation
-    }
-
-    const currentStepQuestions = formQuestions[currentStep].questions;
-    
-    // Validation for contact info page
-    if (isLastStep) {
-      const { phoneNumber, emailAddress } = formData;
-      const hasEmail = emailAddress && emailAddress.trim() !== '';
-      const hasPhone = phoneNumber && phoneNumber.trim() !== '';
-      
-      if (hasEmail) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(emailAddress);
+    // Simulate API call
+    setTimeout(() => {
+      // In a real application, you would handle the response from the server
+      const isSuccess = Math.random() > 0.2; // 80% chance of success
+      if (isSuccess) {
+        setFormStatus('success');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          message: '',
+        });
+      } else {
+        setFormStatus('error');
       }
-      
-      if (hasPhone) {
-        const numericPhone = phoneNumber.replace(/\D/g, ''); 
-        return numericPhone.length >= 5;
-      }
-      
-      return false; 
-    }
-
-    // Validation for all other steps (checkboxes)
-    return currentStepQuestions.every(q => {
-      const selectedValue = formData[q.id];
-      // Changed to use the `|| []` trick here as well for consistency
-      return (selectedValue || []).length > 0;
-    });
+    }, 1000);
   };
-
-  const renderFormContent = () => {
-    if (isSummaryStep) {
-      return <Summary formData={formData} />;
-    }
-
-    const currentQuestionGroup = formQuestions[currentStep];
-    
-    return (
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentQuestionGroup.step}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -20 }}
-          transition={{ duration: 0.3 }}
-          className="space-y-8"
-        >
-          {currentQuestionGroup.questions.map(q => {
-            if (q.type) {
-              return (
-                <ContactField
-                  key={q.id}
-                  question={q}
-                  value={formData[q.id] || ''}
-                  onSelect={handleSelect}
-                />
-              );
-            }
-            return (
-              <QuestionGroup
-                key={q.id}
-                question={q}
-                selected={formData[q.id]}
-                onSelect={handleSelect}
-              />
-            );
-          })}
-        </motion.div>
-      </AnimatePresence>
-    );
-  };
-  
-  const progress = ((currentStep + 1) / formQuestions.length) * 100;
 
   return (
-    <div className="bg-[#111111] text-[#f0f0f0] font-sans min-h-screen flex items-center justify-center p-8 pt-24 relative overflow-hidden">
-      {/* Animated background lines */}
-      <motion.div
-        className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none opacity-20"
-        style={{
-          background: 'repeating-linear-gradient(45deg, #1f1f1f, #1f1f1f 10px, #2a2a2a 10px, #2a2a2a 20px)',
-          backgroundSize: '40px 40px',
-        }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
-        transition={{ duration: 2 }}
-      />
-      
-      <div className="max-w-4xl w-full relative z-10">
-        <motion.h1
-          className="text-4xl md:text-5xl font-bold mb-2 text-center"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-        >
-          <motion.span
-            className="bg-clip-text text-transparent"
-            style={{
-              backgroundImage: 'linear-gradient(to right, #ffffff, #0f95be, #534bff, #140aff, #ffffff)',
-              backgroundSize: '200% auto',
-            }}
-            animate={{ backgroundPositionX: ['0%', '-200%'] }}
-            transition={{
-              duration: 10,
-              ease: "linear",
-              repeat: Infinity,
-              repeatType: "loop",
-            }}
-          >
-            Contact Form
-          </motion.span>
-        </motion.h1>
-        <motion.p
-          className="text-lg text-white text-center mb-12"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-        >
-          STILL WONDERING WHAT TO CHOOSE?
-        </motion.p>
-        
-        <motion.div
-          className="bg-[#212121] rounded-2xl border-2 border-gray-700 shadow-2xl p-8 flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 relative overflow-hidden"
-          initial={{ opacity: 0, scale: 0.9, y: 20 }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            y: 0,
-            borderColor: ['#444', '#0f95be', '#444'], // Border glow
-          }}
-          transition={{
-            duration: 0.8,
-            ease: "easeOut",
-            borderColor: {
-              duration: 6, // Duration for the border glow
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "linear"
-            }
-          }}
-          whileHover={{
-            y: -5, // Lift effect on hover
-            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5)", // Expanded shadow on hover
-            scale: 1.01
-          }}
-        >
-          {/* Left Panel: Progress and Navigation */}
-          <div className="w-full md:w-1/4">
-            <h3 className="text-lg font-bold mb-4">Questions</h3>
-            <ul className="space-y-2">
-              {allSteps.map((title, index) => (
-                <li key={index}
-                    onClick={() => setCurrentStep(index)}
-                    className={`cursor-pointer transition-colors duration-300
-                              ${currentStep === index ? 'text-[#0f95be] font-semibold' : 'text-gray-400 hover:text-gray-200'}`}>
-                  {`Step ${index + 1}: ${title}`}
-                </li>
-              ))}
-            </ul>
+    <div className="bg-white text-gray-800 font-inter antialiased">
+      {/* Header Section */}
+      <header className="absolute top-0 left-0 right-0 z-10 p-6 flex justify-between items-center text-white">
+        <h1 className="text-xl font-bold">BIG BEAR VANS</h1>
+        <nav className="hidden md:flex space-x-6 text-sm font-semibold">
+          <a href="#" className="hover:text-amber-400 transition-colors">Home</a>
+          <a href="#" className="hover:text-amber-400 transition-colors">About</a>
+          <a href="#" className="hover:text-amber-400 transition-colors">Services</a>
+          <a href="#" className="hover:text-amber-400 transition-colors">Contact</a>
+          <a href="#" className="hover:text-amber-400 transition-colors">Testimonials</a>
+        </nav>
+        <button className="md:hidden text-white">
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative h-[80vh] flex items-center justify-center text-center bg-gray-900 overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+        <img
+          src="https://placehold.co/1920x1080/000000/FFFFFF?text=Contact+Background"
+          alt="Van interior"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-40"
+          style={{ filter: 'brightness(0.5)' }}
+        />
+        <div className="relative z-10 p-8 md:p-12 space-y-4 rounded-lg">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">Contact Us</h2>
+          <p className="text-white max-w-2xl mx-auto text-sm md:text-base">
+            Contact us today for a free consultation. We are experts in custom van conversions, specializing in personalized solutions for adventurers, digital nomads, and families.
+          </p>
+          <div className="flex justify-center space-x-4 mt-6">
+            <button className="bg-amber-400 text-gray-900 px-6 py-3 rounded-full font-bold shadow-lg hover:bg-amber-500 transition-colors">
+              Call Us
+            </button>
+            <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-bold shadow-lg hover:bg-gray-200 transition-colors">
+              Email Us
+            </button>
           </div>
+        </div>
+      </section>
 
-          {/* Right Panel: Current Question */}
-          <div className="w-full md:w-3/4">
-            {/* Progress Bar */}
-            <div className="w-full bg-[#1f1f1f] rounded-full h-2 mb-8">
-              <motion.div
-                className="bg-[#0f95be] h-2 rounded-full"
-                initial={{ width: `${((currentStep) / formQuestions.length) * 100}%` }}
-                animate={{ width: `${progress}%` }}
-                transition={{ duration: 0.5 }}
-              ></motion.div>
-            </div>
-            <form onSubmit={handleSubmit}>
-              {renderFormContent()}
-              
-              <div className="flex justify-between items-center mt-8">
-                <motion.button
-                  type="button"
-                  onClick={handlePrevious}
-                  disabled={currentStep === 0}
-                  className="px-6 py-2 rounded-full border flex items-center gap-2 transition-all duration-300"
-                  variants={buttonVariants}
-                  initial="initial"
-                  whileHover="hover"
-                  whileTap="tap"
-                  animate={currentStep === 0 ? "disabled" : "initial"}
-                >
-                  <ChevronLeft size={20} /> Previous
-                </motion.button>
-                
-                {validationMessage && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="text-sm text-red-500 text-center mx-2"
-                  >
-                    {validationMessage}
-                  </motion.div>
-                )}
-
-                {isLastStep ? (
-                  <SubmitButton isLoading={isLoading} />
-                ) : (
-                  <motion.button
-                    type="button"
-                    onClick={handleNext}
-                    className="px-6 py-2 rounded-full border flex items-center gap-2 transition-all duration-300"
-                    variants={buttonVariants}
-                    initial="initial"
-                    whileHover="hover"
-                    whileTap="tap"
-                    animate={isFormComplete() ? "initial" : "disabled"}
-                  >
-                    Next <ChevronRight size={20} />
-                  </motion.button>
-                )}
+      {/* Consultation Section */}
+      <section className="py-16 md:py-24 bg-gray-100">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">Schedule a Free Consultation Call</h3>
+            <p className="text-gray-600">
+              Pick a date & time that works for you.
+            </p>
+          </div>
+          <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8 border-t-8 border-t-indigo-600">
+            {/* Left side: Content */}
+            <div className="md:w-1/2 flex-grow">
+              <div className="flex items-start space-x-4">
+                <span className="text-indigo-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                </span>
+                <div>
+                  <h4 className="font-bold text-gray-900 text-lg">B&B Van Conversions</h4>
+                  <p className="text-gray-600 text-sm">Free consultation call</p>
+                </div>
               </div>
+              <ul className="mt-6 space-y-4 text-gray-600 text-sm list-inside">
+                <li className="flex items-center space-x-2">
+                  <span className="text-amber-400">
+                    <CheckCircle className="w-5 h-5" />
+                  </span>
+                  <span>Free, no-obligation consultation</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="text-amber-400">
+                    <CheckCircle className="w-5 h-5" />
+                  </span>
+                  <span>Speak with our conversion experts</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="text-amber-400">
+                    <CheckCircle className="w-5 h-5" />
+                  </span>
+                  <span>Discuss your unique vision & project details</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="text-amber-400">
+                    <CheckCircle className="w-5 h-5" />
+                  </span>
+                  <span>Get your questions answered</span>
+                </li>
+              </ul>
+              <div className="mt-6 border-t pt-4 text-gray-600 text-sm">
+                <div className="flex items-center space-x-2 mb-2">
+                  <Phone className="w-4 h-4 text-gray-500" />
+                  <span>530-555-0100</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mail className="w-4 h-4 text-gray-500" />
+                  <span>contact@bigbearvans.com</span>
+                </div>
+              </div>
+            </div>
+            {/* Right side: Calendar (Placeholder) */}
+            <div className="md:w-1/2 bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <p className="text-center font-bold text-gray-900 mb-4">Select a Date & Time</p>
+              <div className="grid grid-cols-7 gap-1 text-center text-xs text-gray-500">
+                {daysOfWeek.map((day, index) => (
+                  <span key={index} className="font-bold">{day}</span>
+                ))}
+                {Array.from({ length: 30 }).map((_, index) => (
+                  <span key={index} className="p-2 cursor-pointer rounded-full hover:bg-indigo-100 hover:text-indigo-600">
+                    {index + 1}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quote Form Section */}
+      <section className="py-16 md:py-24 bg-indigo-600 text-white relative overflow-hidden">
+        <div className="container mx-auto px-6 max-w-3xl text-center z-10 relative">
+          <h3 className="text-3xl md:text-4xl font-extrabold mb-2">Contact Us For a Custom Quote</h3>
+          <p className="text-indigo-100 mb-8">
+            Please fill out the form below to get an estimated quote for your custom van conversion.
+          </p>
+          <div className="bg-white text-gray-900 rounded-3xl shadow-xl p-8 md:p-12 relative">
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="First Name"
+                  className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                  required
+                />
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Last Name"
+                  className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow"
+                value={formData.phone}
+                onChange={handleInputChange}
+              />
+              <textarea
+                name="message"
+                placeholder="Message/Project Details"
+                rows="4"
+                className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow"
+                value={formData.message}
+                onChange={handleInputChange}
+                required
+              ></textarea>
+
+              {formStatus === 'success' && (
+                <div className="flex items-center text-green-600 bg-green-50 p-3 rounded-lg">
+                  <CheckCircle className="w-5 h-5 mr-2" />
+                  <span>Thank you! Your message has been sent.</span>
+                </div>
+              )}
+              {formStatus === 'error' && (
+                <div className="flex items-center text-red-600 bg-red-50 p-3 rounded-lg">
+                  <XCircle className="w-5 h-5 mr-2" />
+                  <span>Oops! Something went wrong. Please try again.</span>
+                </div>
+              )}
+
+              <button
+                type="submit"
+                className="w-full bg-indigo-600 text-white font-bold py-3 rounded-lg shadow-md hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              >
+                Submit
+              </button>
             </form>
           </div>
-        </motion.div>
+        </div>
+      </section>
 
-        <AnimatePresence>
-          {message && (
-            <motion.div
-              initial={{ opacity: 0, y: 50, scale: 0.8 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 50, scale: 0.8 }}
-              className={`fixed bottom-4 right-4 p-4 rounded-lg shadow-lg flex items-center gap-2 z-[100]
-                        ${message.type === 'success' ? 'bg-green-600' : 'bg-red-600'}`}
-            >
-              {message.text}
-              <button onClick={() => setMessage(null)} className="ml-auto">
-                <X size={20} />
-              </button>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+      {/* Map Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="flex flex-col md:flex-row items-center md:space-x-12">
+            <div className="md:w-1/2 mb-8 md:mb-0 space-y-4">
+              <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+                Our Van Conversion Shop in <span className="text-indigo-600">Big Bear City</span>
+              </h3>
+              <p className="text-gray-600">
+                Come visit our shop to discuss your project in person and see some of our finished vans.
+              </p>
+              <div className="space-y-2 text-gray-600">
+                <p className="flex items-center space-x-2">
+                  <MapPin className="w-5 h-5 text-indigo-600" />
+                  <span>543 Van Conversion Dr.</span>
+                </p>
+                <p className="flex items-center space-x-2">
+                  <span>Big Bear City, CA 92314</span>
+                </p>
+              </div>
+              <p className="text-gray-600">
+                <strong>Hours:</strong> Mon - Fri: 9am - 5pm, Sat: 10am - 3pm, Sun: Closed
+              </p>
+            </div>
+            <div className="md:w-1/2 w-full">
+              <div className="bg-gray-200 rounded-xl overflow-hidden shadow-lg h-64 md:h-80">
+                <img
+                  src="https://placehold.co/800x600/e5e7eb/6b7280?text=Map+Location"
+                  alt="Map location"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-16 md:py-24 bg-gray-900 text-white">
+        <div className="container mx-auto px-6 max-w-5xl text-center">
+          <h3 className="text-3xl md:text-4xl font-extrabold mb-8">Our Work</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="relative rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+              <img
+                src="https://placehold.co/600x400/374151/FFFFFF?text=Van+Interior"
+                alt="Van 1"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="relative rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+              <img
+                src="https://placehold.co/600x400/374151/FFFFFF?text=Van+Exterior"
+                alt="Van 2"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="relative rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+              <img
+                src="https://placehold.co/600x400/374151/FFFFFF?text=Van+Details"
+                alt="Van 3"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
     </div>
   );
-}
+};
+
+export default ContactUs;
+
+

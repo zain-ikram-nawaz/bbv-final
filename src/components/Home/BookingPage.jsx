@@ -129,6 +129,69 @@ export default function BookingPage() {
     <div className="text-gray-400 text-xs mt-3">Time zone</div>
   </div>
 </div>
+{/* Contact Form Section */}
+  <p className='pt-20 pb-4'>Prefer Email? Send us your questions, and we’ll get back to you ASAP!</p>
+<div className="w-full flex items-center justify-center">
+  <form
+    action="#"
+    method="POST"
+    className="w-full max-w-2xl shadow-lg rounded-2xl p-8 space-y-2"
+  >
+    <h2 className="text-2xl font-bold text-white text-center">Contact Us</h2>
+
+    <div>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Full Name"
+        className="mt-2 w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3"
+        required
+      />
+    </div>
+
+    <div>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email Address"
+        className="mt-2 w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3"
+        required
+      />
+    </div>
+
+    <div>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Phone Number"
+        className="mt-2 w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3"
+      />
+    </div>
+
+    <div>
+      <textarea
+        id="comment"
+        name="comment"
+        rows="4"
+        placeholder="Your Comment"
+        className="mt-2 w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3"
+        required
+      ></textarea>
+    </div>
+
+    <div className="text-center">
+      <button
+        type="submit"
+        className="w-full sm:w-auto bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold shadow-md border border-blue-600 hover:bg-blue-50 transition"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
 
 
 
