@@ -8,7 +8,7 @@ export default function Shop() {
     {
       slug:"Camper Van Deluxe",
       _id: "1",
-       gallery: ["/shop/1.jpg"],
+       gallery: ["/Shop/1.jpg"],
       van_listing: {
         title: "Camper Van Deluxe",
         description: "A stylish and comfortable van for your next road trip adventure."
@@ -19,7 +19,7 @@ export default function Shop() {
     {
       slug: "Adventure Van Pro",
       _id: "2",
-       gallery: ["/shop/2.jpg"],
+       gallery: ["/Shop/2.jpg"],
       van_listing: {
         title: "Adventure Van Pro",
         description: "Fully equipped adventure van with modern interiors and durability."
@@ -30,7 +30,7 @@ export default function Shop() {
     {
       slug : "Classic Retro Van",
       _id: "3",
-   gallery: ["/shop/3.jpg"],
+   gallery: ["/Shop/3.jpg"],
       van_listing: {
         title: "Classic Retro Van",
         description: "Vintage styled van with modern comfort and great performance."
@@ -41,7 +41,7 @@ export default function Shop() {
       {
         slug: "Classic Retro Van",
       _id: "4",
-    gallery: ["/shop/4.jpg"],
+    gallery: ["/Shop/4.jpg"],
       van_listing: {
         title: "Classic Retro Van",
         description: "Vintage styled van with modern comfort and great performance."
