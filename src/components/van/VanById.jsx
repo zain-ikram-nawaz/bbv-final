@@ -27,6 +27,7 @@ const ArrowLeftIcon = () => (
 export default function VanById({ van }) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  // console.log(van,"van")
 
   if (!van) {
     return (
@@ -96,7 +97,7 @@ export default function VanById({ van }) {
           <div className="max-w-4xl mx-auto p-4">
             <img
               src={van.gallery[currentImageIndex]}
-              alt={`${van.vehicle_listing?.title} ${currentImageIndex + 1}`}
+              alt={`${van.van_listing?.title} ${currentImageIndex + 1}`}
               className="max-h-screen w-auto mx-auto rounded-lg"
             />
           </div>
@@ -119,7 +120,7 @@ export default function VanById({ van }) {
         <div className="mb-12 rounded-2xl overflow-hidden shadow-xl">
           <img
             src={van.gallery?.[0]}
-            alt={van.vehicle_listing?.title}
+            alt={van.van_listing?.title}
             className="w-full h-96 object-cover"
           />
         </div>
@@ -130,7 +131,7 @@ export default function VanById({ van }) {
             {van.van_listing?.title}
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            {van.vehicle_listing?.description}
+            {van.van_listing?.description}
           </p>
           {van.sold && (
             <p className="mt-4 text-red-600 font-semibold text-lg">(This van has been sold)</p>
@@ -151,7 +152,7 @@ export default function VanById({ van }) {
                   <div className="relative overflow-hidden">
                     <img
                       src={img}
-                      alt={`${van.vehicle_listing?.title} ${index + 1}`}
+                      alt={`${van.van_listing?.title} ${index + 1}`}
                       className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
