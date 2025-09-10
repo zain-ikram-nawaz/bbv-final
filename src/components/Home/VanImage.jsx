@@ -165,7 +165,7 @@ const data = van && van.length > 0 ? van : dummyVans;
         Big Bear Vans
         </h2>
         <p className="mt-4 text-sm sm:text-base md:text-xl text-gray-600 md:px-10">
-       It doesn’t matter if you’re a family with kids or pets looking for an off-road experience, a person wanting a mobile office with a view, or a retiree ready to roam the open road; we do custom van conversions according to the needs of our clients in California and the surrounding states.
+       if you’re a family with kids or pets looking for an off-road experience, a person wanting a mobile office with a view, or a retiree ready to roam the open road; we do custom van conversions according to the needs of our clients in California and the surrounding states.
         </p>
       </div>
 <div className="flex flex-col justify-center items-center z-10 text-center mb-16 px-4">
