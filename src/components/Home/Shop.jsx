@@ -81,20 +81,6 @@ export default function Shop() {
       alt={item.van_listing?.title}
       className="w-full h-full object-cover rounded-xl"
     />
-{/*
-    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-      <div className="p-4 w-full">
-        <h3 className="text-white font-semibold text-lg md:text-xl lg:text-2xl truncate">
-          {item.van_listing?.title || "Van Accessory"}
-        </h3>
-        <p className="text-blue-200 text-sm md:text-base">
-          ${item.price || "99.99"}
-        </p>
-        <button className="mt-2 bg-blue-600 hover:bg-blue-700 text-white py-1 px-3 rounded-md text-xs md:text-sm transition-colors">
-          View Details
-        </button>
-      </div>
-    </div> */}
   </ShapeCard>
 ))}
 
