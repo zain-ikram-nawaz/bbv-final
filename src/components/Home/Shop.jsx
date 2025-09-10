@@ -8,7 +8,7 @@ export default function Shop() {
     {
       slug:"Camper Van Deluxe",
       _id: "1",
-       gallery: ["/Shop/1.jpg"],
+       gallery: ["/Shop/1.JPG"],
       van_listing: {
         title: "Camper Van Deluxe",
         description: "A stylish and comfortable van for your next road trip adventure."
