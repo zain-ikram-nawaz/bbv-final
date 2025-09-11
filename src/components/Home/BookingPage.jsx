@@ -1,9 +1,7 @@
-// src/components/BookingPage.jsx
+
 "use client";
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Clock } from 'lucide-react';
 import Vector48 from './vector48';
 
 export default function BookingPage() {
@@ -66,6 +64,18 @@ export default function BookingPage() {
 
   return (
     <div className="min-h-screen bg-[#534BFF] flex flex-col items-center justify-center p-4 md:p-11 relative overflow-hidden">
+<div className="py-4 space-y-2">
+<h2 className="text-4xl md:text-5xl text-center font-extrabold text-white mb-6 leading-tight">
+           Contact us<span className="animated-gradient-text"></span>
+            </h2>
+  <h1 className="text-center text-xl font-semibold text-white ">
+    Schedule a Free Consultation Call Today
+  </h1>
+    <p className="text-center text-white md:w-[50vw]">
+    Have questions? Let’s talk. Book a free call with our experts in California and discuss your vision with us.
+  </p>
+</div>
+
   <Vector48 bg='' color="#212121" className='rounded-lg'/>
    <div
   className={`
@@ -85,9 +95,9 @@ export default function BookingPage() {
   <div className="flex flex-col justify-center items-center md:items-start p-6">
     {/* Logo & Info */}
     <Image
-      src="/images/bbv-logo.png"
+      src="/logos/logo BBV-03.svg"
       alt="Big Bear Vans Logo"
-      width={isMobile ? 150 : 200}
+      width={isMobile ? 100 : 150}
       height={isMobile ? 40 : 50}
       className="mb-4"
     />
@@ -98,14 +108,14 @@ export default function BookingPage() {
       If you have more query, contact the host number below.
     </p>
     <p className="text-base md:text-lg font-bold text-white mt-2 text-center md:text-left">
-      Host – <span className="text-[#534BFF]">+1 951-441-9748</span>
+      Host – <span className="text-[#534BFF]">+1 (951)-441-9748</span>
     </p>
   </div>
 
   {/* Right Section (Calendar) */}
   <div className="border-t md:border-t-0 md:border-l border-gray-700 flex flex-col justify-center items-center p-6">
     <h2 className="text-xl md:text-3xl font-bold mb-4 text-white">Select a Date & Time</h2>
-    <p className="text-gray-400 text-xs md:text-sm mb-4">August 2025</p>
+    <p className="text-gray-400 text-xs md:text-sm mb-4">September 2025</p>
     <div className="grid grid-cols-7 gap-2 text-xs md:text-sm text-center text-white w-full">
       {['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'].map((dayName, index) => (
         <div key={index} className="text-gray-400 font-semibold">{dayName}</div>
@@ -137,7 +147,7 @@ export default function BookingPage() {
     method="POST"
     className="w-full max-w-2xl shadow-lg rounded-2xl p-8 space-y-2"
   >
-    <h2 className="text-2xl font-bold text-white text-center">Contact Us</h2>
+    {/* <h2 className="text-2xl font-bold text-white text-center">Contact Us</h2> */}
 
     <div>
       <input

@@ -9,15 +9,14 @@ import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function VanImage({van}) {
+export default function VanImage({ van }) {
   const [mounted, setMounted] = useState(false);
   const vanImageRef = useRef(null);
   const headingRef = useRef(null);
-  console.log(van,"from backend")
- const dummyVans = [
+  const dummyVans = [
 
     {
-      slug : "Montreal 170 AWD Blue Gray",
+      slug: "Montreal 170 AWD Blue Gray",
       _id: "1",
       gallery: ["/images/Montreal 170 AWD Blue Gray.png"],
       van_listing: {
@@ -28,7 +27,7 @@ export default function VanImage({van}) {
       formatted_price: "$$196,000"
     },
     {
-      slug:"Santa Monica V6 Turbo",
+      slug: "Santa Monica V6 Turbo",
       _id: "2",
       gallery: ["/images/Santa Monica V6 Turbo.png"],
       van_listing: {
@@ -39,7 +38,7 @@ export default function VanImage({van}) {
       formatted_price: "$$224,542"
     },
     {
-      slug : "Santa Monica Gray Gas",
+      slug: "Santa Monica Gray Gas",
       _id: "3",
       gallery: ["/images/Santa Monica Gray Gas.png"],
       van_listing: {
@@ -50,7 +49,7 @@ export default function VanImage({van}) {
       formatted_price: "$$139,000"
     }
   ];
-const data = van && van.length > 0 ? van : dummyVans;
+  const data = van && van.length > 0 ? van : dummyVans;
 
 
   useEffect(() => {
@@ -156,105 +155,117 @@ const data = van && van.length > 0 ? van : dummyVans;
           ref={headingRef}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-extrabold tracking-tight leading-tight"
         >
-         Start Your Adventure With
+          Start Your Adventure With
         </h2>
         <h2
 
           className="text-4xl sm:text-5xl text-blue-600 md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight"
         >
-        Big Bear Vans
+          Big Bear Vans
         </h2>
         <p className="mt-4 text-sm sm:text-base md:text-xl text-gray-600 md:px-10">
-       if you’re a family with kids or pets looking for an off-road experience, a person wanting a mobile office with a view, or a retiree ready to roam the open road; we do custom van conversions according to the needs of our clients in California and the surrounding states.
+          If you’re a family with kids or pets looking for an off-road experience, a person wanting a mobile office with a view, or a retiree ready to roam the open road; we do custom van conversions according to the needs of our clients in California and the surrounding states.
         </p>
       </div>
-<div className="flex flex-col justify-center items-center z-10 text-center mb-16 px-4">
-    <h2
+      <div className="flex flex-col justify-center items-center z-10 text-center mb-16 px-4">
+        <h2
           ref={headingRef}
           className="text-2xl font-semibold sm:text-3xl md:text-3xl lg:text-4xl tracking-tight leading-tight"
         >
-      Buy
+          Buy
         </h2>
         <p className="mt-4 text-sm sm:text-base md:text-xl text-gray-600 w-[60vw]">
-    Want to hit the road sooner? Browse our inventory of vans for sale. Whether you’re looking for a fully equipped Ford Transit camper or Mercedes Sprinter 4x4, we’ve got you covered. Simply pay, sign, collect the keys, and drive away in your new mobile home. Skip the wait today. Your dream RV is just a click away.
+          Want to hit the road sooner? Browse our inventory of vans for sale. Whether you’re looking for a fully equipped Ford Transit camper or Mercedes Sprinter 4x4, we’ve got you covered. Simply pay, sign, collect the keys, and drive away in your new mobile home. Skip the wait today. Your dream RV is just a click away.
         </p>
-</div>
+      </div>
       {/* Main Content Area - Centering the image */}
- <div className="relative z-10 w-full h-full flex flex-col items-center py-10 md:py-10 px-4">
-  {/* Grid for Cards */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center w-full max-w-5xl">
-    {[...data]
-      .sort((a, b) => (b.sold === false) - (a.sold === true)) // ✅ sold=true waale pehle
-      .slice(0, 3) // sirf 3 items
-      .map((item, i) => (
-        <ShapeCard
-          key={item._id}
-          shape="customRectMirror"
-          color="#181818"
-          className="w-full sm:w-[300px] md:w-[260px] shadow-lg group"
-        >
-          {/* Image Section */}
-          <div className="w-full h-full relative overflow-hidden">
-            <img
-              src={item.gallery[0] || "/images/van-sample.jpg"}
-              alt={item.van_listing?.title}
-              className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
-            />
+      <div className="relative z-10 w-full h-full flex flex-col items-center py-10 md:py-10 px-4">
+        {/* Grid for Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center w-full max-w-5xl">
+          {[...data]
+            .sort((a, b) => (b.sold === false) - (a.sold === true)) // ✅ sold=true waale pehle
+            .slice(0, 3) // sirf 3 items
+            .map((item, i) => (
+              <ShapeCard
+                key={item._id}
+                shape="customRectMirror"
+                color="#181818"
+                className="w-full sm:w-[300px] md:w-[260px] shadow-lg group"
+              >
+            {/* Image Section */}
+<div className="w-full h-full relative overflow-hidden group">
+  {/* Default Image */}
+  <img
+    src={item.gallery[0] || "/images/van-sample.jpg"}
+    alt={item.van_listing?.title}
+    className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
+  />
 
-            {/* Sold / For Sale Tag */}
-            <span
-              className={`absolute top-3 left-0 px-2 py-1 text-xs font-bold rounded z-20 ${
-                item.sold ? "bg-red-500 text-white" : "bg-green-600 text-white"
-              }`}
-            >
-              {item.sold ? "SOLD" : "FOR SALE"}
-            </span>
-          </div>
+  {/* Hover Large Preview (index 4 image) */}
+  {item.gallery[4] && (
+    <div className="absolute inset-0 flex items-center justify-center bg-black/70 opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 transition duration-500 z-30">
+      <img
+        src={item.gallery[8]}
+        alt="Preview"
+        className="max-h-[80vh] max-w-[80vw] rounded-xl shadow-2xl"
+      />
+    </div>
+  )}
 
-          {/* Content Section */}
-          <div className="w-full flex flex-col justify-between h-[calc(100%-160px)] bg-black bg-opacity-80">
-            <div>
-              <h3 className="text-lg font-bold text-white p-1">
-                {item.van_listing?.title}
-              </h3>
-              <p className="text-sm text-gray-400 line-clamp-3 p-1">
-                {item.van_listing?.description}
-              </p>
-            </div>
-
-            {/* Price + Button */}
-            <div className="flex items-center justify-between p-2">
-              <span className="text-lg font-semibold">
-                {item.formatted_price}
-              </span>
-
-              {item.sold ? (
-                <button
-                  disabled
-                  className="bg-gray-500 text-white px-3 py-1 rounded-md text-lg cursor-not-allowed opacity-70"
-                >
-                  Sold Out
-                </button>
-              ) : (
-                <Link href={`/van-for-sale/${item.slug}`}>
-                  <button className="bg-black text-white px-3 py-1 rounded-md transition text-lg">
-                    See More
-                  </button>
-                </Link>
-              )}
-            </div>
-          </div>
-        </ShapeCard>
-      ))}
-  </div>
-
-  {/* Explore Button */}
-  <Link href="/van-for-sale" className="mt-10">
-    <button className="bg-black text-white px-4 py-2 rounded-md transition text-sm">
-      Explore Vans
-    </button>
-  </Link>
+  {/* Sold / For Sale Tag */}
+  <span
+    className={`absolute top-3 left-0 px-2 py-1 text-xs font-bold rounded z-40 ${
+      item.sold ? "bg-red-500 text-white" : "bg-green-600 text-white"
+    }`}
+  >
+    {item.sold ? "SOLD" : "FOR SALE"}
+  </span>
 </div>
+
+                {/* Content Section */}
+                <div className="w-full flex flex-col justify-between h-[calc(100%-160px)] bg-black bg-opacity-80">
+                  <div>
+                    <h3 className="text-lg font-bold text-white p-1">
+                      {item.van_listing?.title}
+                    </h3>
+                    <p className="text-sm text-gray-400 line-clamp-3 p-1">
+                      {item.van_listing?.description}
+                    </p>
+                  </div>
+
+                  {/* Price + Button */}
+                  <div className="flex items-center justify-between p-2">
+                    <span className="text-lg font-semibold">
+                      {item.formatted_price}
+                    </span>
+
+                    {item.sold ? (
+                      <button
+                        disabled
+                        className="bg-gray-500 text-white px-3 py-1 rounded-md text-lg cursor-not-allowed opacity-70"
+                      >
+                        Sold Out
+                      </button>
+                    ) : (
+                      <Link href={`/van-for-sale/${item.slug}`}>
+                        <button className="bg-black text-white px-3 py-1 rounded-md transition text-lg">
+                          See More
+                        </button>
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              </ShapeCard>
+            ))}
+        </div>
+
+        {/* Explore Button */}
+        <Link href="/van-for-sale" className="mt-10">
+          <button className="bg-black text-white px-4 py-2 rounded-md transition text-sm">
+            Explore Vans
+          </button>
+        </Link>
+      </div>
 
 
 

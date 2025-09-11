@@ -39,7 +39,7 @@ export default function UpFooter() {
 
 
         {/* Dropdown Section */}
-        <div className="w-full max-w-2xl bg-white/5 backdrop-blur-md rounded-2xl shadow-2xl p-6 border border-white/10">
+        <div className="w-full max-w-2xl bg-whit backdrop-blur-md rounded-2xl shadow-2xl p-6 border border-white/10">
           {dropdowns.map((item, index) => (
             <div key={index} className="mb-4 last:mb-0">
               <button

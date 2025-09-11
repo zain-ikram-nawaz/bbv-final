@@ -493,28 +493,23 @@ export default function WhyChooseUs() {
                 <div className="relative z-10 w-full h-full p-8 flex flex-col justify-start">
                   <div className="relative w-full h-48 rounded-md overflow-hidden mb-6 border-2 border-gray-700">
                     <div ref={el => glareRefs.current[0] = el} className="absolute inset-0 z-30 opacity-0 glare-effect"></div>
-                    <Image src="/images/customizabledesigns.webp" alt="True Custom Builds" layout="fill" objectFit="cover" ref={el => imageRefs.current[0] = el} data-speed="0.05" />
+                    <Image src="/WhyChooseBBv/customizable-designs.WEBP" alt="True Custom Builds" layout="fill" objectFit="cover" ref={el => imageRefs.current[0] = el} data-speed="0.05" />
                   </div>
                   <div className="card-content-wrapper">
                     <div className="card-text-content" ref={el => contentRefs.current[0] = el}>
                       <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#00FFFF] transition-colors duration-300">True Custom Builds</h3>
                       <div className="relative w-full flex-grow flex flex-col justify-start">
-                        <ul className="list-disc list-inside text-gray-300 space-y-2 teaser-content">
-                          <li>Use of 3D scanners for precision.</li>
+                        <ul className="list-disc list-outside pl-5 text-gray-300 space-y-2 teaser-content">
+                          <li>Create fully customized campervans.</li>
                           <li>CNC machines for any configuration.</li>
-                          <li>Over 180 customized vans built.</li>
+                          <li>85+ complete, custom-built projects.</li>
                         </ul>
                         <div className="full-content">
-                          <p className="text-gray-300">No cookie-cutter builds here; Big Bear Vans is a truly custom campervan conversion shop. 3D scanners and two CNC machines that create any configuration and style you want in your campervan. From eco-friendly campervans and mobile office vans and luxury sprinter vans, we have successfully crafted more than 180 customized campervans with 5-star ratings.</p>
+                          <p className="text-gray-300">No cookie-cutter builds here. Big Bear Vans is a fully custom engineering company with CAD, CAM, 3D Scanner, CNC Router, and CNC Laser Fibre that creates any configuration and style you want in your campervan. From pet-friendly campervans and mobile office vans to family van layouts, we have successfully created more than 85 customized campervans with 5-star ratings..</p>
                         </div>
                       </div>
                     </div>
-                    {/* <button ref={el => buttonRefs.current[0] = el} onClick={() => openModal('Van Volume Calculator', <VanVolumeCalculator />)} className="absolute bottom-16 left-1/2 -translate-x-1/2 w-[calc(100%-4rem)] py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0">
-                      <span className="flex items-center justify-center space-x-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 6a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM6 9a1 1 0 000 2h8a1 1 0 100-2H6z" /></svg>
-                        <span>Calculate Your Van Space</span>
-                      </span>
-                    </button> */}
+
                   </div>
                 </div>
               </div>
@@ -545,29 +540,24 @@ export default function WhyChooseUs() {
                     <div className="card-text-content" ref={el => contentRefs.current[1] = el}>
                       <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#00FFFF] transition-colors duration-300">Post Build Support</h3>
                       <div className="relative w-full flex-grow flex flex-col justify-start">
-                        <ul className="list-disc list-inside text-gray-300 space-y-2 teaser-content">
+                        <ul className="list-disc list-outside pl-5 text-gray-300 space-y-2 teaser-content">
                           <li>1-year craftsmanship warranty.</li>
-                          <li>Free 6-month maintenance.</li>
+                          <li>Visit our shop for installing upgrades.</li>
                           <li>Remote assistance available.</li>
                         </ul>
                         <div className="full-content">
-                          <p className="text-gray-300">From that call to get key handover, we guide and support you at every step. Unlike other van makers, Big Bear Vans provides after-build support to its customers. We offer:</p>
-                          <ul className="list-disc list-inside text-gray-300 mt-4 space-y-2">
+                          <p className="text-gray-300">From first call to last key handover, we guide and support you at every step. Unlike other RV dealers, Big Bear Vans provides after-build support to its customers. We offer:</p>
+                          <ul className="list-disc list-outside pl-5 text-gray-300 space-y-2 teaser-content">
                             <li>1-year warranty on our craftsmanship.</li>
-                            <li>Free maintenance for 6 months.</li>
+                            <li>24/7 roadside support for you.</li>
                             <li>Visit our shop for servicing and installing upgrades.</li>
                             <li>Remote assistance on warranty issues.</li>
-                            <li>24/7 Remote assistance for urgent issues</li>
+
                           </ul>
                         </div>
                       </div>
                     </div>
-                    {/* <button ref={el => buttonRefs.current[1] = el} onClick={() => openModal('Maintenance Cost Estimator', <MaintenanceCostEstimator />)} className="absolute bottom-16 left-1/2 -translate-x-1/2 w-[calc(100%-4rem)] py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0">
-                      <span className="flex items-center justify-center space-x-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 9h2a1 1 0 000-2H4a1 1 0 000 2zM3 14h2a1 1 0 000-2H3a1 1 0 000 2zM15 14h2a1 1 0 000-2h-2a1 1 0 000 2zM10 18a1 1 0 001-1v-1a1 1 0 10-2 0v1a1 1 0 001 1z" /></svg>
-                        <span>Estimate Your Service Cost</span>
-                      </span>
-                    </button> */}
+
                   </div>
                 </div>
               </div>
@@ -592,28 +582,22 @@ export default function WhyChooseUs() {
                 <div className="relative z-10 w-full h-full p-8 pt-10 flex flex-col justify-start">
                   <div className="relative w-full h-48 rounded-md overflow-hidden mb-6 border-2 border-gray-700 mt-4">
                     <div ref={el => glareRefs.current[2] = el} className="absolute inset-0 z-30 opacity-0 glare-effect"></div>
-                    <Image src="/WhyChooseBBV/CNC.jpg" alt="CNC Technology" layout="fill" objectFit="cover" ref={el => imageRefs.current[2] = el} data-speed="0.05" />
+                    <Image src="/WhyChooseBBV/qualitypng.png" alt="CNC Technology" layout="fill" objectFit="cover" ref={el => imageRefs.current[2] = el} data-speed="0.05" />
                   </div>
                   <div className="card-content-wrapper">
                     <div className="card-text-content" ref={el => contentRefs.current[2] = el}>
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#00FFFF] transition-colors duration-300">CNC Technology</h3>
                       <div className="relative w-full flex-grow flex flex-col justify-start">
-                        <ul className="list-disc list-inside text-gray-300 space-y-2 teaser-content">
-                          <li>Precise cuts and high quality.</li>
-                          <li>Designed by CAD/CAM team.</li>
-                          <li>3D scanners for accurate measurements.</li>
-                        </ul>
+                      <ul className="list-disc list-outside pl-5 text-gray-300 space-y-2 teaser-content">
+  <li>Use of CAD, CAM, 3D Scanner, CNC Router, and CNC Laser Fibre.</li>
+  <li>Handles complex designs and customization.</li>
+  <li>Highly precise cuts.</li>
+</ul>
                         <div className="full-content">
-                          <p className="text-gray-300 flex-grow">At Big Bear Vans, we use state-of-the-art CNC (Computer Numerical Control) technology to take your van customization to the next level. Every van component is designed by our CAD/CAM team of machines, and scanned by 3D scanners to ensure precise cuts and the best quality.</p>
+                          <p className="text-gray-300 flex-grow">At Big Bear Vans, we use state-of-the-art CNC (Computer Numerical Control) technology to take your van customization to the next level. Every van component is designed using 3D CAD, cut by CNC machines, and scanned by 3D scanners to ensure precise cuts and the best quality.</p>
                         </div>
                       </div>
                     </div>
-                    {/* <button ref={el => buttonRefs.current[2] = el} onClick={() => openModal('CNC Cut Time Estimator', <CNCCutTimeEstimator />)} className="mt-4 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
-                      <span className="flex items-center justify-center space-x-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 102 0V8a1 1 0 00-.445-.832l-.445-.224z" clipRule="evenodd" /></svg>
-                        <span>Estimate Cut Time</span>
-                      </span>
-                    </button> */}
                   </div>
                 </div>
               </div>
@@ -650,12 +634,6 @@ export default function WhyChooseUs() {
                         </div>
                       </div>
                     </div>
-                    {/* <button ref={el => buttonRefs.current[3] = el} onClick={() => openModal('Insulation R-Value Calculator', <InsulationRValueCalculator />)} className="mt-4 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
-                      <span className="flex items-center justify-center space-x-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 102 0V8a1 1 0 00-.445-.832l-.445-.224z" clipRule="evenodd" /></svg>
-                        <span>Calculate Insulation R-Value</span>
-                      </span>
-                    </button> */}
                   </div>
                 </div>
               </div>
@@ -682,7 +660,7 @@ export default function WhyChooseUs() {
                     <div className="card-text-content" ref={el => contentRefs.current[4] = el}>
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#00FFFF] transition-colors duration-300">Off-grid Ready</h3>
                       <div className="relative w-full flex-grow flex flex-col justify-start">
-                        <ul className="list-disc list-inside text-gray-300 space-y-2 teaser-content">
+                        <ul className="list-disc list-outside pl-5 text-gray-300 space-y-2 teaser-content">
                           <li>Campervan solar panels.</li>
                           <li>Lithium battery banks.</li>
                           <li>Designed for bumpy rides.</li>
@@ -692,12 +670,6 @@ export default function WhyChooseUs() {
                         </div>
                       </div>
                     </div>
-                    {/* <button ref={el => buttonRefs.current[4] = el} onClick={() => openModal('Solar Power Calculator', <SolarPowerCalculator />)} className="mt-4 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
-                      <span className="flex items-center justify-center space-x-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M11 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 11a1 1 0 000-2h1a1 1 0 000 2H4zM16 11a1 1 0 000-2h1a1 1 0 000 2h-1zM10 18a1 1 0 001-1v-1a1 1 0 10-2 0v1a1 1 0 001 1z" clipRule="evenodd" /></svg>
-                        <span>Calculate Solar Needs</span>
-                      </span>
-                    </button> */}
                   </div>
                 </div>
               </div>
@@ -710,83 +682,57 @@ export default function WhyChooseUs() {
               {/* Card 1: True Custom Builds */}
               <div className="relative bg-[#1A1A1A] rounded-lg shadow-xl p-6">
                 <div className="relative w-full h-48 rounded-md overflow-hidden mb-6 border-2 border-gray-700">
-                  <Image src="/images/customizabledesigns.webp" alt="True Custom Builds" layout="fill" objectFit="cover" />
+                  <Image src="/WhyChooseBBV/customizable-designs.webp" alt="True Custom Builds" layout="fill" objectFit="cover" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">True Custom Builds</h3>
-                <p className="text-gray-300">No cookie-cutter builds here; Big Bear Vans is a truly custom campervan conversion shop. 3D scanners and two CNC machines that create any configuration and style you want in your campervan. From eco-friendly campervans and mobile office vans and luxury sprinter vans, we have successfully crafted more than 180 customized campervans with 5-star ratings.</p>
-                {/* <button onClick={() => openModal('Van Volume Calculator', <VanVolumeCalculator />)} className="mt-6 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
-                  <span className="flex items-center justify-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 6a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM6 9a1 1 0 000 2h8a1 1 0 100-2H6z" /></svg>
-                    <span>Calculate Your Van Space</span>
-                  </span>
-                </button> */}
+                <p className="text-gray-300">At Big Bear Vans, we use state-of-the-art CNC (Computer Numerical Control) technology to take your van customization to the next level. Every van component is designed using 3D CAD, cut by CNC machines, and scanned by 3D scanners to ensure precise cuts and the best quality.</p>
+
               </div>
 
               {/* Card 2: Post Build Support */}
               <div className="relative bg-[#1A1A1A] rounded-lg shadow-xl p-6">
                 <div className="relative w-full h-48 rounded-md overflow-hidden mb-6 border-2 border-gray-700">
-                  <Image src="/WhyChhoseBBV/post.jpg" alt="Post Build Support" layout="fill" objectFit="cover" />
+                  <Image src="/WhyChooseBBV/post.jpg" alt="Post Build Support" layout="fill" objectFit="cover" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Post Build Support</h3>
-                <p className="text-gray-300">From that call to get key handover, we guide and support you at every step. Unlike other van makers, Big Bear Vans provides after-build support to its customers. We offer:</p>
-                <ul className="list-disc list-inside text-gray-300 mt-4 space-y-2">
+                <p className="text-gray-300">From first call to last key handover, we guide and support you at every step. Unlike other RV dealers, Big Bear Vans provides after-build support to its customers. We offer:</p>
+                <ul className="list-disc list-outside pl-5 text-gray-300 space-y-2 teaser-content">
                   <li>1-year warranty on our craftsmanship.</li>
-                  <li>Free maintenance for 6 months.</li>
+                  <li>24/7 roadside support for you.</li>
                   <li>Visit our shop for servicing and installing upgrades.</li>
                   <li>Remote assistance on warranty issues.</li>
-                  <li>24/7 Remote assistance for urgent issues</li>
+
                 </ul>
-                {/* <button onClick={() => openModal('Maintenance Cost Estimator', <MaintenanceCostEstimator />)} className="mt-6 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
-                  <span className="flex items-center justify-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 9h2a1 1 0 000-2H4a1 1 0 000 2zM3 14h2a1 1 0 000-2H3a1 1 0 000 2zM15 14h2a1 1 0 000-2h-2a1 1 0 000 2zM10 18a1 1 0 001-1v-1a1 1 0 10-2 0v1a1 1 0 001 1z" /></svg>
-                    <span>Estimate Your Service Cost</span>
-                  </span>
-                </button> */}
               </div>
 
               {/* Card 3: CNC Technology */}
               <div className="relative bg-[#1A1A1A] rounded-lg shadow-xl p-6">
                 <div className="relative w-full h-48 rounded-md overflow-hidden mb-6 border-2 border-gray-700">
-                  <Image src="/images/CNCtechnology.jpg" alt="CNC Technology" layout="fill" objectFit="cover" />
+                  <Image src="/WhyChooseBBV/qualitypng.png" alt="CNC Technology" layout="fill" objectFit="cover" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">CNC Technology</h3>
-                <p className="text-gray-300">At Big Bear Vans, we use state-of-the-art CNC (Computer Numerical Control) technology to take your van customization to the next level. Every van component is designed by our CAD/CAM team of machines, and scanned by 3D scanners to ensure precise cuts and the best quality.</p>
-                {/* <button onClick={() => openModal('CNC Cut Time Estimator', <CNCCutTimeEstimator />)} className="mt-6 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
-                  <span className="flex items-center justify-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 102 0V8a1 1 0 00-.445-.832l-.445-.224z" clipRule="evenodd" /></svg>
-                    <span>Estimate Cut Time</span>
-                  </span>
-                </button> */}
+                <p className="text-gray-300">At Big Bear Vans, we use state-of-the-art CNC (Computer Numerical Control) technology to take your van customization to the next level. Every van component is designed using 3D CAD, cut by CNC machines, and scanned by 3D scanners to ensure precise cuts and the best quality.</p>
+
               </div>
 
               {/* Card 4: Quality Materials */}
               <div className="relative bg-[#1A1A1A] rounded-lg shadow-xl p-6">
                 <div className="relative w-full h-48 rounded-md overflow-hidden mb-6 border-2 border-gray-700">
-                  {/* <Image src="/images/qualitymaterial.jpg" alt="Quality Materials" layout="fill" objectFit="cover" /> */}
+                  <Image src="/WhyChooseBBV/quality1.jpg" alt="Quality Materials" layout="fill" objectFit="cover" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Quality Materials</h3>
                 <p className="text-gray-300">Big Bear Vans is known for using top-notch materials in camper vans. From CNC-cut cabinets and eco-friendly insulation to durable flooring and a spacious bathroom, we use only the best and the highest-quality materials to ensure your van stands the test of time.</p>
-                {/* <button onClick={() => openModal('Insulation R-Value Calculator', <InsulationRValueCalculator />)} className="mt-6 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
-                  <span className="flex items-center justify-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 102 0V8a1 1 0 00-.445-.832l-.445-.224z" clipRule="evenodd" /></svg>
-                    <span>Calculate Insulation R-Value</span>
-                  </span>
-                </button> */}
+
               </div>
 
               {/* Card 5: Off-grid Ready */}
               <div className="relative bg-[#1A1A1A] rounded-lg shadow-xl p-6">
                 <div className="relative w-full h-48 rounded-md overflow-hidden mb-6 border-2 border-gray-700">
-                  {/* <Image src="/images/offgridready.jpg" alt="offgridready" layout="fill" objectFit="cover" /> */}
+                  <Image src="/WhyChooseBBV/off-grid.jpg"alt="offgridready" layout="fill" objectFit="cover" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Off-grid Ready</h3>
                 <p className="text-gray-300">Our customized campervans come equipped with all the necessary off-road accessories, like campervan solar panels, lithium battery banks, etc. They are designed to handle all the off-grid escapes, bumpy rides, and cross-country trips.</p>
-                {/* <button onClick={() => openModal('Solar Power Calculator', <SolarPowerCalculator />)} className="mt-6 w-full py-3 px-4 rounded-full bg-[#00FFFF] text-gray-900 font-semibold hover:bg-white transition-colors duration-300 transform hover:scale-105">
-                  <span className="flex items-center justify-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M11 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 11a1 1 0 000-2h1a1 1 0 000 2H4zM16 11a1 1 0 000-2h1a1 1 0 000 2h-1zM10 18a1 1 0 001-1v-1a1 1 0 10-2 0v1a1 1 0 001 1z" clipRule="evenodd" /></svg>
-                    <span>Calculate Solar Needs</span>
-                  </span>
-                </button> */}
+
               </div>
             </div>
           </div>
@@ -794,7 +740,7 @@ export default function WhyChooseUs() {
           {/* Call to Action Button */}
           <div className="text-center mt-16">
             <Link href={"/inquery"} className="relative inline-flex items-center justify-center px-10 py-4 rounded-full font-semibold overflow-hidden group shadow-lg animated-button-gradient">
-              <span className="relative text-white z-10">Start Your Custom Build</span>
+              <span className="relative text-white z-10">Start Custom Build</span>
             </Link>
           </div>
         </div>

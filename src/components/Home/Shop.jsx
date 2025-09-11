@@ -76,11 +76,12 @@ export default function Shop() {
     color="#2194f6"
 
   >
-    <img
-      src={item.gallery[0] || "/images/van-sample.jpg"}
-      alt={item.van_listing?.title}
-      className="w-full h-full object-cover rounded-xl"
-    />
+   <img
+  src={item.gallery[0] || "/images/van-sample.jpg"}
+  alt={item.van_listing?.title}
+  className="w-full h-full object-cover rounded-xl transform transition-transform duration-300 hover:scale-105"
+/>
+
   </ShapeCard>
 ))}
 

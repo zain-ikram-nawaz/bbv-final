@@ -96,7 +96,7 @@ const ReviewCard = ({ review, index, handleVote, votes, isLoggedIn, handleReport
         ease: "power2.out"
       });
     };
-    
+
     const handleMouseEnter = () => {
       setIsHovered(true);
       gsap.to(glowRef.current, { scale: 1, duration: 0.5 });
@@ -112,7 +112,7 @@ const ReviewCard = ({ review, index, handleVote, votes, isLoggedIn, handleReport
       });
       gsap.to(glowRef.current, { scale: 0, opacity: 0, duration: 0.5 });
     };
-    
+
     card.addEventListener("mousemove", handleMouseMove);
     card.addEventListener("mouseenter", handleMouseEnter);
     card.addEventListener("mouseleave", handleMouseLeave);
@@ -205,8 +205,8 @@ const ReviewCard = ({ review, index, handleVote, votes, isLoggedIn, handleReport
       className="relative w-72 h-[360px] flex-shrink-0 group transition-all duration-300 transform-gpu cursor-pointer"
     >
       {/* Parallax Background Layer */}
-      <div 
-        ref={parallaxRef} 
+      <div
+        ref={parallaxRef}
         className="absolute inset-0 bg-cover bg-center rounded-lg z-0 opacity-20 transition-opacity duration-300"
         style={{
           backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M50 0 L100 25 L75 100 L25 100 L0 75 Z\' fill=\'%23888\' opacity=\'0.2\'/%3E%3C/svg%3E")',
@@ -215,14 +215,14 @@ const ReviewCard = ({ review, index, handleVote, votes, isLoggedIn, handleReport
       ></div>
 
       {/* Interactive Mouse Follower Glow */}
-      <div 
-        ref={glowRef} 
+      <div
+        ref={glowRef}
         className="absolute w-12 h-12 rounded-full blur-md bg-[#00FFFF] opacity-0 pointer-events-none transform -translate-x-1/2 -translate-y-1/2"
       ></div>
 
       {/* Dynamic Border Glow on Hover */}
       <div className={`absolute inset-0 rounded-lg pointer-events-none transition-all duration-300 ${isHovered ? 'animate-border-pulse' : ''}`}></div>
-      
+
       {/* Main Card Content */}
       <div className={`
           relative z-10 card-style-default rounded-lg p-4 w-full h-full backdrop-blur-md transition-all duration-300 text-center flex flex-col items-center justify-between
@@ -236,7 +236,7 @@ const ReviewCard = ({ review, index, handleVote, votes, isLoggedIn, handleReport
             </div>
             {/* The primary change is here: text-gray-200 for better visibility */}
             <p className={`text-xs italic mb-2 mt-1 transition-colors duration-300 ${isHovered ? 'text-white' : 'text-gray-200'}`}>"{review.text}"</p>
-            
+
             {/* AI-Powered Keywords */}
             <div className="flex flex-wrap justify-center gap-1 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               {review.keywords && review.keywords.map((keyword, i) => (
@@ -246,11 +246,11 @@ const ReviewCard = ({ review, index, handleVote, votes, isLoggedIn, handleReport
               ))}
             </div>
           </div>
-          
+
           <div className="flex flex-col items-center w-full mt-auto">
             {/* The primary change is here: text-white for better visibility */}
             <h4 className={`font-semibold text-sm transition-colors duration-300 ${isHovered ? 'text-white' : 'text-white'}`}>{review.name}</h4>
-            
+
             {isLoggedIn && (
               <div className="flex gap-2 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {/* Upvote Button */}
@@ -328,19 +328,19 @@ const CustomerReviews = () => {
   };
 
   useEffect(() => {
-    if (!isDesktop) return; // Only run marquee on desktop
+    if (!isDesktop) return;
 
     const pauseMarquee = (e) => {
       const marquee = e.currentTarget.querySelector('.marquee-left, .marquee-right');
       if (marquee) {
-        gsap.to(marquee, { animationPlayState: 'paused', duration: 0.2 });
+        marquee.style.animationPlayState = "paused";  // direct pause
       }
     };
 
     const resumeMarquee = (e) => {
       const marquee = e.currentTarget.querySelector('.marquee-left, .marquee-right');
       if (marquee) {
-        gsap.to(marquee, { animationPlayState: 'running', duration: 0.2 });
+        marquee.style.animationPlayState = "running"; // direct resume
       }
     };
 
@@ -368,19 +368,20 @@ const CustomerReviews = () => {
     };
   }, [isDesktop]);
 
+
   const reviews = [
     {
       id: 1,
-      name: "Erik Christy",
+      name: "Danora Ramsey ",
       rating: 5,
-      text: "Big Bear Vans built an amazing custom campervan for me. They have a really nice team to work with, and I was able to really work closely with them on getting exactly what I wanted in my design. I am a remote worker, so I wanted to have an office space as well as a beefy electrical system, a full kitchen, a shower, and a bed area. I've gotten so many compliments on my buildout and couldn't be happier with how it turned out. Highly recommend Big Bear Vans if you're looking to buy a camper van.",
+      text: "Big Bear Vans did a full conversion for my MB Sprinter, and I could not be happier! I had very specific requests, and they met all of my requests and are truly a completely customizable conversion company. I went to about three different conversion companies, and I was only given certain planned layouts and certain colors. Not at Big Bear Vans, they accommodated my every wish. They are also extremely knowledgeable. I came back for a couple of upgrades, and they gladly accommodated me. I highly suggest Big Bear Vans for your conversion!",
       keywords: ["custom campervan", "remote worker", "electrical system", "full kitchen"]
     },
     {
       id: 2,
-      name: "Danora Ramsey",
+      name: "Erik Christy",
       rating: 5,
-      text: "Big Bear Vans did a full conversion for my MB Sprinter, and I could not be happier! I had very specific requests, and they met all of my requests and are truly a completely customizable conversion company. I went to about three different conversion companies, and I was only given certain planned layouts and certain colors. Not at Big Bear Vans, they accommodated my every wish. I came back for a couple of upgrades, and they gladly accommodated me. I highly suggest Big Bear Vans for your conversion!",
+      text: "Big Bear Vans built an amazing custom campervan for me. They have a really nice team to work with, and I was able to really work closely with them on getting exactly what I wanted in my design. I am a remote worker, so I wanted to have an office space as well as a beefy electrical system, a full kitchen, a shower, and a bed area. I've gotten so many compliments on my buildout and couldn't be happier with how it turned out. Highly recommend Big Bear Vans if you're looking to buy a camper van.",
       keywords: ["full conversion", "MB Sprinter", "customizable", "knowledgeable"]
     },
     {
@@ -392,29 +393,43 @@ const CustomerReviews = () => {
     },
     {
       id: 4,
-      name: "Jessica P.",
+      name: "Summer Fun",
       rating: 5,
-      text: "The attention to detail and material selection advice was invaluable. The final parts exceeded our expectations.",
+      text: "Excellent design and details, and quality builds. Go visit and check them out!.",
       keywords: ["attention to detail", "material selection", "exceeded expectations"]
     },
     {
       id: 5,
-      name: "Chris B.",
+      name: "Cathy & Ben.",
       rating: 5,
-      text: "Seamless integration from CAD file to delivered part. A truly professional and reliable service.",
+      text: "We love our 4x4 camper van. We probably looked at 10 or 12 different kinds of Sprinter layouts and couldn’t find exactly what we wanted till we found Big Bear Vans. It has everything we want.",
       keywords: ["seamless integration", "professional", "reliable service"]
     },
     {
       id: 6,
-      name: "Maria G.",
+      name: "Ann & Jack.",
       rating: 5,
-      text: "They handled our complex custom parts with ease. The fast delivery was a huge bonus for our project timeline.",
+      text: "We absolutely love our campervan. One of the big reasons why we decided to go with a van was that we have four dogs, and it’s a challenge to find something for your dog to sit on when you want to go on a trip. But Big Bear Vans make it possible for us to go on vacation with our dogs. We definitely advise you to visit them.",
+      keywords: ["complex custom parts", "fast delivery", "project timeline"]
+    },
+     {
+      id: 7,
+      name: "Camila.",
+      rating: 5,
+      text: "I wasn’t sure about buying a pre-built van at first, but I had to change my mind after seeing the vans for sale at BBV. The van was ready to go, and the quality was even better than I expected. Everything inside was well thought out and super functional. I received so many compliments on my van. So glad I found them!",
       keywords: ["complex custom parts", "fast delivery", "project timeline"]
     },
   ];
 
   const fullReviews = [...reviews, ...reviews, ...reviews];
-
+  const review = [
+    { id: 1, url: "https://www.youtube.com/shorts/LVlpGPNm8xo" },
+    { id: 2, url: "https://www.youtube.com/shorts/JZcO-55cyUs" },
+    { id: 3, url: "https://www.youtube.com/shorts/RzNGf62N-XY" },
+    { id: 1, url: "https://www.youtube.com/shorts/VRIMaoa4zvY" },
+    { id: 2, url: "https://www.youtube.com/shorts/b5SxoQ0ZIWY" },
+    { id: 3, url: "https://www.youtube.com/shorts/C7oKRJ_AhFY" },
+  ];
   return (
     <>
       <style jsx global>{`
@@ -432,7 +447,7 @@ const CustomerReviews = () => {
           50% { background-position: 100% 50%; }
           100% { background-position: 0% 50%; }
         }
-        
+
         .animated-background-gradient-3 {
           background: linear-gradient(135deg, #0D1B2A, #1A2A40, #2C3E50);
           background-size: 400% 400%;
@@ -474,7 +489,7 @@ const CustomerReviews = () => {
           border-radius: 0.5rem; /* rounded-lg */
           padding: 1rem; /* p-4 */
         }
-        
+
         .card-style-hover {
           background-color: #3C4477;
           border-width: 3px;
@@ -527,8 +542,8 @@ const CustomerReviews = () => {
         .animate-star-pulse svg:nth-child(4) { animation-delay: 0.3s; }
         .animate-star-pulse svg:nth-child(5) { animation-delay: 0.4s; }
       `}</style>
-      <section 
-        id="customer-reviews" 
+      <section
+        id="customer-reviews"
         className="relative w-full text-white py-16 md:py-24"
       >
         <div className="absolute inset-0 animated-background-gradient-3 z-0" />
@@ -538,7 +553,7 @@ const CustomerReviews = () => {
             backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'6\' height=\'6\' viewBox=\'0 0 6 6\' xmlns=\'http://www.w3.org/2000%2Fsvg\'%3E%3Cg fill=\'%239C92AC\' fill-opacity=\'0.2\' fill-rule=\'evenodd\'%3E%3Cpath d=\'M5 0h1L0 6V5zM6 5v1H5z\'/%3E%3C/g%3E%3C/svg%3E")',
           }}
         />
-        
+
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
             See Why Our <span className="animated-gradient-text-customers">Customers Love Us</span>
@@ -552,11 +567,11 @@ const CustomerReviews = () => {
             <div className="relative flex overflow-hidden mt-8 md:mt-12 fade-edges marquee-container" ref={marqueeRef1}>
               <div className="flex space-x-8 marquee-left">
                 {fullReviews.map((review, index) => (
-                  <ReviewCard 
-                    key={index} 
-                    review={review} 
-                    index={index} 
-                    handleVote={handleVote} 
+                  <ReviewCard
+                    key={index}
+                    review={review}
+                    index={index}
+                    handleVote={handleVote}
                     votes={votes}
                     isLoggedIn={isLoggedIn}
                     handleReport={handleReport}
@@ -566,21 +581,40 @@ const CustomerReviews = () => {
             </div>
 
             {/* Second Row of Reviews (moving right) */}
-            <div className="relative flex overflow-hidden mt-8 md:mt-12 py-8 overflow-hidden fade-edges marquee-container" ref={marqueeRef2}>
+            <div
+              className="relative flex mt-8 md:mt-12 py-8 overflow-hidden fade-edges marquee-container"
+              ref={marqueeRef2}
+            >
               <div className="flex space-x-8 marquee-right">
-                {fullReviews.map((review, index) => (
-                  <ReviewCard 
-                    key={index} 
-                    review={review} 
-                    index={index} 
-                    handleVote={handleVote} 
-                    votes={votes}
-                    isLoggedIn={isLoggedIn}
-                    handleReport={handleReport}
-                  />
+                {review.map((review, index) => (
+                  <div
+                    key={index}
+                    className="w-[200px] sm:w-[240px] md:w-[280px] lg:w-[280px]" // 👈 card width responsive
+                  >
+                   <div className="relative w-full aspect-[9/16]">
+  <iframe
+    className="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
+    src={`${review.url.replace("shorts/", "embed/")}?start=0&end=30`}
+    title={`YouTube Shorts ${index}`}
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
+  {/* <video
+  className="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
+  src="/shorts/short1.mp4"
+  controls
+  autoPlay
+  muted
+  loop
+/> */}
+</div>
+
+                  </div>
                 ))}
               </div>
             </div>
+
           </div>
         )}
 

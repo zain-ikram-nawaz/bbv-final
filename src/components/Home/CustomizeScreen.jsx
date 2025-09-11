@@ -229,7 +229,7 @@ const CustomizeSection = () => {
               </p>
             <Link href={"/inquery"}>
               <button className="customize-btn px-8 py-3 rounded-full font-semibold lg:ml-1">
-                Start Your Custom Build
+                Start Custom Build
               </button>
             </Link>
             </div>

@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -36,7 +37,7 @@ export default function Navbar() {
       {/* Navbar Container */}
       <header className="sticky top-0 w-full z-50 px-6 py-1 md:px-10 md:py-1 flex items-center justify-between bg-black bg-opacity-60 backdrop-blur-lg">
         <div className="flex-shrink-0 logo-animation">
-          <img src="/images/bbv-logo.png" alt="BigBearVans Logo" className="h-[4.5rem] w-auto" />
+          <Image src="/logos/logo BBV-01.svg" alt="BigBearVans Logo"  width={100} height={100} />
         </div>
 
         {/* Desktop Navigation */}
